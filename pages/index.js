@@ -16,11 +16,12 @@ export default function Home() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return (
     <>
       <Head>
-        <title>About - Illuminate Avenue | Why We're Different</title>
-        <meta name="description" content="We hate the agencies of the past. We've generated billions for businesses large and small. We care about each business like it's our own." />
+        <title>Illuminate Avenue - Strategic Marketing Excellence</title>
+        <meta name="description" content="20+ years orchestrating transformative marketing strategies for global brands. No cookie-cutter solutions. No empty promises. Just strategic brilliance that delivers measurable impact." />
       </Head>
       
       <style jsx>{`
@@ -113,13 +114,8 @@ export default function Home() {
           transition: color 0.2s;
         }
         
-        .nav-menu a:hover,
-        .nav-menu a.active {
+        .nav-menu a:hover {
           color: var(--black);
-        }
-        
-        .nav-menu a.active {
-          font-weight: 600;
         }
         
         .nav-cta {
@@ -141,37 +137,11 @@ export default function Home() {
         
         /* Hero Section */
         .hero {
-          min-height: 85vh;
+          min-height: 90vh;
           display: flex;
           align-items: center;
-          padding: 160px 0 80px;
+          padding: 120px 0 60px;
           background: linear-gradient(135deg, var(--white) 0%, var(--gray-100) 100%);
-          position: relative;
-          overflow: hidden;
-        }
-        
-        .hero::before {
-          content: '';
-          position: absolute;
-          top: -50%;
-          right: -50%;
-          width: 200%;
-          height: 200%;
-          background: radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
-          animation: rotate 30s linear infinite;
-        }
-        
-        @keyframes rotate {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-        
-        .hero-content {
-          position: relative;
-          z-index: 1;
-          text-align: center;
-          max-width: 1000px;
-          margin: 0 auto;
         }
         
         .hero-badge {
@@ -212,47 +182,95 @@ export default function Home() {
           font-weight: 400;
           color: var(--gray-600);
           max-width: 700px;
-          margin: 0 auto 48px;
-          line-height: 1.7;
-        }
-        
-        /* Manifesto Section */
-        .manifesto {
-          padding: 120px 0;
-          background: var(--black);
-          color: var(--white);
-        }
-        
-        .manifesto-content {
-          max-width: 900px;
-          margin: 0 auto;
-        }
-        
-        .manifesto-title {
-          font-family: var(--font-display);
-          font-size: clamp(36px, 5vw, 64px);
-          font-weight: 400;
-          line-height: 1.2;
-          margin-bottom: 48px;
-          text-align: center;
-        }
-        
-        .manifesto-text {
-          font-size: 20px;
-          line-height: 1.8;
-          color: var(--gray-300);
           margin-bottom: 32px;
         }
         
-        .manifesto-text strong {
-          color: var(--gold);
-          font-weight: 600;
+        .hero-stats {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 32px;
+          padding: 24px 0;
+          margin-bottom: 32px;
+          border-top: 1px solid var(--gray-200);
         }
         
-        /* Values Section */
-        .values {
+        .stat-number {
+          font-family: var(--font-display);
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 1;
+          margin-bottom: 6px;
+          background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-label {
+          font-family: var(--font-accent);
+          font-size: 14px;
+          color: var(--gray-600);
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+        
+        .hero-cta-group {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+        }
+        
+        /* Fixed Button Styles */
+        .btn-primary {
+          padding: 16px 32px;
+          background: var(--black);
+          color: var(--white);
+          text-decoration: none;
+          font-family: var(--font-accent);
+          font-weight: 600;
+          font-size: 15px;
+          border-radius: 6px;
+          transition: all 0.3s;
+          display: inline-block;
+        }
+        
+        .btn-primary:hover {
+          background: var(--gold);
+          color: var(--black);
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-text {
+          color: var(--black);
+          text-decoration: none;
+          font-family: var(--font-accent);
+          font-weight: 600;
+          font-size: 15px;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          border-bottom: 2px solid transparent;
+          transition: all 0.3s;
+        }
+        
+        .btn-text:hover {
+          border-bottom-color: var(--gold);
+          gap: 12px;
+        }
+        
+        .btn-text::after {
+          content: '→';
+          transition: transform 0.3s;
+        }
+        
+        .btn-text:hover::after {
+          transform: translateX(4px);
+        }
+        
+        /* Services Section */
+        .services {
           padding: 120px 0;
-          background: var(--white);
+          background: var(--black);
         }
         
         .section-header {
@@ -280,59 +298,140 @@ export default function Home() {
           font-weight: 400;
           letter-spacing: -0.02em;
           line-height: 1.2;
-          color: var(--black);
+          color: var(--white);
           margin-bottom: 24px;
         }
         
         .section-subtitle {
           font-size: 20px;
-          color: var(--gray-600);
+          color: var(--gray-400);
           max-width: 700px;
           margin: 0 auto;
-          line-height: 1.6;
         }
         
-        .values-grid {
+        .services-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 32px;
+          margin-top: 80px;
+        }
+        
+        .service-card {
+          background: var(--gray-900);
+          border: 1px solid var(--gray-800);
+          border-radius: 16px;
+          padding: 40px;
+          transition: all 0.3s;
+        }
+        
+        .service-card:hover {
+          transform: translateY(-8px);
+          border-color: var(--gold);
+          box-shadow: 0 20px 40px rgba(212,175,55,0.2);
+        }
+        
+        .service-name {
+          font-family: var(--font-accent);
+          font-size: 24px;
+          font-weight: 600;
+          color: var(--white);
+          margin-bottom: 12px;
+        }
+        
+        .service-subtitle {
+          font-family: var(--font-display);
+          font-size: 16px;
+          color: var(--gold);
+          margin-bottom: 20px;
+          font-style: italic;
+        }
+        
+        .service-description {
+          color: var(--gray-400);
+          line-height: 1.6;
+          margin-bottom: 24px;
+        }
+        
+        .service-features {
+          list-style: none;
+        }
+        
+        .service-features li {
+          padding: 8px 0;
+          color: var(--gray-300);
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        
+        .service-features li::before {
+          content: '';
+          width: 20px;
+          height: 20px;
+          background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+          display: inline-block;
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          flex-shrink: 0;
+        }
+        
+        /* How It Works Section - Fixed */
+        .how-it-works {
+          padding: 120px 0;
+          background: var(--white);
+        }
+        
+        .how-it-works-title {
+          font-family: var(--font-display);
+          font-size: clamp(36px, 5vw, 64px);
+          font-weight: 400;
+          letter-spacing: -0.02em;
+          line-height: 1.2;
+          margin-bottom: 32px;
+          text-align: center;
+        }
+        
+        .how-it-works-subtitle {
+          font-size: 20px;
+          color: var(--gray-600);
+          margin-bottom: 80px;
+          max-width: 700px;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }
+        
+        .process-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 48px;
         }
         
-        .value-card {
+        .process-step {
           text-align: center;
           padding: 48px 32px;
           background: var(--gray-100);
-          border-radius: 20px;
+          border-radius: 16px;
           transition: all 0.3s;
         }
         
-        .value-card:hover {
+        .process-step:hover {
           transform: translateY(-8px);
-          box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
         
-        .value-icon {
-          width: 80px;
-          height: 80px;
-          margin: 0 auto 24px;
+        .process-number {
+          font-family: var(--font-display);
+          font-size: 64px;
+          font-weight: 700;
           background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-bottom: 24px;
+          line-height: 1;
         }
         
-        .value-icon::after {
-          content: '';
-          position: absolute;
-          width: 40px;
-          height: 40px;
-          background: rgba(255, 255, 255, 0.9);
-          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-        }
-        
-        .value-title {
+        .process-title {
           font-family: var(--font-accent);
           font-size: 24px;
           font-weight: 600;
@@ -340,25 +439,25 @@ export default function Home() {
           color: var(--black);
         }
         
-        .value-description {
+        .process-description {
           color: var(--gray-600);
-          line-height: 1.7;
+          line-height: 1.6;
         }
         
-        /* Story Section */
-        .story {
+        /* About Section */
+        .about {
           padding: 120px 0;
-          background: var(--gray-100);
+          background: var(--white);
         }
         
-        .story-content {
+        .about-content {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 80px;
           align-items: center;
         }
         
-        .story-text h2 {
+        .about-title {
           font-family: var(--font-display);
           font-size: clamp(36px, 4vw, 56px);
           font-weight: 400;
@@ -366,168 +465,139 @@ export default function Home() {
           margin-bottom: 32px;
         }
         
-        .story-text p {
+        .about-description {
           font-size: 18px;
           line-height: 1.7;
           color: var(--gray-600);
-          margin-bottom: 24px;
+          margin-bottom: 32px;
         }
         
-        .story-stats {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 32px;
-          margin-top: 48px;
-        }
-        
-        .stat {
-          padding: 24px;
-          background: var(--white);
-          border-radius: 12px;
-        }
-        
-        .stat-number {
-          font-family: var(--font-display);
-          font-size: 36px;
-          font-weight: 700;
-          background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          margin-bottom: 8px;
-        }
-        
-        .stat-label {
-          font-family: var(--font-accent);
-          font-size: 14px;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          color: var(--gray-600);
-        }
-        
-        .story-visual {
+        .about-image {
           position: relative;
-          height: 600px;
+          height: 500px;
+          border-radius: 16px;
+          overflow: hidden;
           background: linear-gradient(135deg, var(--black) 0%, var(--gray-900) 100%);
-          border-radius: 20px;
           display: flex;
           align-items: center;
           justify-content: center;
-          overflow: hidden;
         }
         
-        .story-visual::before {
+        /* Sophisticated geometric pattern overlay */
+        .about-image::before {
           content: '';
           position: absolute;
-          width: 100%;
-          height: 100%;
-          background: repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 35px,
-            var(--gold) 35px,
-            var(--gold) 36px
-          );
-          opacity: 0.1;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-image: 
+            repeating-linear-gradient(
+              45deg,
+              transparent,
+              transparent 35px,
+              var(--gold) 35px,
+              var(--gold) 36px
+            ),
+            repeating-linear-gradient(
+              -45deg,
+              transparent,
+              transparent 35px,
+              var(--gold) 35px,
+              var(--gold) 36px
+            ),
+            repeating-linear-gradient(
+              90deg,
+              transparent,
+              transparent 40px,
+              rgba(212, 175, 55, 0.03) 40px,
+              rgba(212, 175, 55, 0.03) 80px
+            );
+          opacity: 0.08;
+          animation: patternShift 30s linear infinite;
         }
         
-        .story-visual::after {
+        @keyframes patternShift {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(40px); }
+        }
+        
+        /* Premium hexagon grid pattern */
+        .about-pattern {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 300px;
+          height: 300px;
+          opacity: 0.15;
+        }
+        
+        .about-pattern::before,
+        .about-pattern::after {
           content: '';
           position: absolute;
+          width: 100px;
+          height: 100px;
+          border: 2px solid var(--gold);
+          transform: rotate(45deg);
+        }
+        
+        .about-pattern::before {
+          top: 20%;
+          left: 20%;
+          animation: rotateShape 20s linear infinite;
+        }
+        
+        .about-pattern::after {
+          bottom: 20%;
+          right: 20%;
+          animation: rotateShape 20s linear infinite reverse;
+        }
+        
+        @keyframes rotateShape {
+          0% { transform: rotate(45deg) scale(1); }
+          50% { transform: rotate(225deg) scale(1.1); }
+          100% { transform: rotate(405deg) scale(1); }
+        }
+        
+        /* Circular gradient accent */
+        .about-image::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
           width: 200px;
           height: 200px;
-          background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
-          opacity: 0.2;
+          background: radial-gradient(
+            circle,
+            var(--gold) 0%,
+            transparent 30%,
+            transparent 60%,
+            var(--gold) 60%,
+            transparent 62%
+          );
+          opacity: 0.1;
+          animation: pulse 4s ease-in-out infinite;
         }
         
-        /* Philosophy Section */
-        .philosophy {
-          padding: 120px 0;
-          background: var(--white);
+        @keyframes pulse {
+          0%, 100% { 
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0.1;
+          }
+          50% { 
+            transform: translate(-50%, -50%) scale(1.3);
+            opacity: 0.05;
+          }
         }
         
-        .philosophy-grid {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 64px;
-          max-width: 900px;
-          margin: 0 auto;
-        }
-        
-        .philosophy-item {
-          display: grid;
-          grid-template-columns: 120px 1fr;
-          gap: 48px;
-          align-items: center;
-        }
-        
-        .philosophy-number {
-          font-family: var(--font-display);
-          font-size: 80px;
-          font-weight: 700;
-          background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          text-align: center;
-        }
-        
-        .philosophy-content h3 {
-          font-family: var(--font-accent);
-          font-size: 28px;
-          font-weight: 600;
-          margin-bottom: 16px;
-        }
-        
-        .philosophy-content p {
-          font-size: 18px;
-          line-height: 1.7;
-          color: var(--gray-600);
-        }
-        
-        /* CTA Section */
-        .cta-section {
-          padding: 120px 0;
-          background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
-          text-align: center;
-        }
-        
-        .cta-title {
-          font-family: var(--font-display);
-          font-size: clamp(36px, 5vw, 56px);
-          font-weight: 400;
-          margin-bottom: 24px;
-          color: var(--black);
-        }
-        
-        .cta-subtitle {
-          font-size: 20px;
-          color: var(--black);
-          margin-bottom: 48px;
-          opacity: 0.8;
-        }
-        
-        .btn-primary {
-          padding: 18px 48px;
-          background: var(--black);
-          color: var(--white);
-          text-decoration: none;
-          font-family: var(--font-accent);
-          font-weight: 600;
-          font-size: 16px;
-          border-radius: 8px;
-          transition: all 0.3s;
-          display: inline-block;
-        }
-        
-        .btn-primary:hover {
-          background: var(--white);
-          color: var(--black);
-          transform: translateY(-2px);
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        }
-        
+        /* Contact Section - Fixed */
         .contact {
           padding: 120px 0;
-          background: var(--white);
+          background: var(--black);
+          color: var(--white);
         }
         
         .contact-content {
@@ -536,24 +606,25 @@ export default function Home() {
           text-align: center;
         }
         
-        .contact h2 {
+        .contact-title {
           font-family: var(--font-display);
           font-size: clamp(48px, 6vw, 80px);
           font-weight: 400;
           line-height: 1.1;
-          color: var(--black);
+          color: var(--white);
           margin-bottom: 24px;
         }
         
-        .contact p {
+        .contact-subtitle {
           font-size: 20px;
-          color: var(--gray-600);
+          color: var(--gray-400);
           margin-bottom: 48px;
         }
         
+        /* Fixed Contact Form */
         .contact-form {
-          background: var(--gray-100);
-          border: 1px solid var(--gray-200);
+          background: var(--gray-900);
+          border: 1px solid var(--gray-800);
           border-radius: 16px;
           padding: 48px;
           text-align: left;
@@ -561,11 +632,29 @@ export default function Home() {
           margin: 0 auto;
         }
         
-        .form-grid {
+        .form-row {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 24px;
           margin-bottom: 24px;
+        }
+        
+        .form-row.full-width {
+          grid-template-columns: 1fr;
+        }
+        
+        .form-buttons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 32px;
+          margin-top: 32px;
+        }
+        
+        .form-note {
+          color: var(--gray-400);
+          font-size: 14px;
+          font-style: italic;
         }
         
         .form-group {
@@ -577,55 +666,49 @@ export default function Home() {
           font-family: var(--font-accent);
           font-size: 13px;
           font-weight: 600;
-          color: var(--gold-dark);
+          color: var(--gold);
           margin-bottom: 8px;
           text-transform: uppercase;
           letter-spacing: 0.05em;
         }
         
-        .form-input {
+        .form-input, .form-textarea, select.form-input {
           padding: 16px 20px;
-          background: var(--white);
-          border: 1px solid var(--gray-300);
+          background: var(--gray-800);
+          border: 1px solid var(--gray-700);
           border-radius: 8px;
-          color: var(--black);
+          color: var(--white);
           font-family: var(--font-body);
           font-size: 15px;
           transition: all 0.3s;
+          width: 100%;
+          appearance: none;
         }
         
-        .form-input:focus {
+        select.form-input {
+          cursor: pointer;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23D4AF37' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: right 20px center;
+          padding-right: 48px;
+        }
+        
+        .form-input:focus, .form-textarea:focus {
           outline: none;
           border-color: var(--gold);
+          box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+        
+        .form-input::placeholder, .form-textarea::placeholder {
+          color: var(--gray-500);
         }
         
         .form-textarea {
-          width: 100%;
           min-height: 120px;
-          padding: 16px 20px;
-          background: var(--white);
-          border: 1px solid var(--gray-300);
-          border-radius: 8px;
-          color: var(--black);
-          font-family: var(--font-body);
-          font-size: 15px;
-          transition: all 0.3s;
           resize: vertical;
         }
         
-        .form-textarea:focus {
-          outline: none;
-          border-color: var(--gold);
-        }
-        
-        .form-actions {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 32px;
-        }
-        
-        .form-button {
+        .form-submit {
           padding: 18px 48px;
           background: var(--gold);
           color: var(--black);
@@ -639,78 +722,16 @@ export default function Home() {
           transition: all 0.3s;
         }
         
-        .form-button:hover {
+        .form-submit:hover {
           background: var(--gold-dark);
-        }
-        
-        .form-note {
-          color: var(--gray-500);
-          font-size: 14px;
-          font-style: italic;
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
         }
         
         /* Footer */
-        .footer {
-          padding: 80px 0 40px;
+        footer {
+          padding: 60px 0;
           background: var(--black);
-          color: var(--white);
-        }
-        
-        .footer-grid {
-          display: grid;
-          grid-template-columns: 2fr 1fr 1fr 1fr;
-          gap: 48px;
-          margin-bottom: 48px;
-        }
-        
-        .footer h3 {
-          font-family: var(--font-display);
-          font-size: 32px;
-          margin-bottom: 16px;
-          font-style: italic;
-          color: var(--gold);
-        }
-        
-        .footer-description {
-          color: var(--gray-400);
-          line-height: 1.7;
-          max-width: 300px;
-        }
-        
-        .footer h4 {
-          font-family: var(--font-accent);
-          font-size: 14px;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          margin-bottom: 20px;
-          color: var(--gold);
-        }
-        
-        .footer ul {
-          list-style: none;
-        }
-        
-        .footer ul li {
-          margin-bottom: 12px;
-        }
-        
-        .footer ul li a {
-          color: var(--gray-400);
-          text-decoration: none;
-          transition: color 0.3s;
-        }
-        
-        .footer ul li a:hover {
-          color: var(--gold);
-        }
-        
-        .footer-email {
-          color: var(--gold);
-          text-decoration: none;
-        }
-        
-        .footer-bottom {
-          padding-top: 32px;
           border-top: 1px solid var(--gray-800);
           text-align: center;
           color: var(--gray-500);
@@ -719,17 +740,19 @@ export default function Home() {
         /* Responsive */
         @media (max-width: 1024px) {
           .container { padding: 0 32px; }
-          .values-grid { grid-template-columns: 1fr; }
-          .story-content { grid-template-columns: 1fr; gap: 48px; }
-          .philosophy-item { grid-template-columns: 1fr; text-align: center; }
-          .form-grid { grid-template-columns: 1fr; }
-          .footer-grid { grid-template-columns: 1fr; }
+          .services-grid { grid-template-columns: repeat(2, 1fr); }
+          .about-content { grid-template-columns: 1fr; gap: 48px; }
+          .process-grid { grid-template-columns: 1fr; gap: 32px; }
+          .form-row { grid-template-columns: 1fr; }
         }
         
         @media (max-width: 768px) {
           .container { padding: 0 24px; }
           .nav-menu { display: none; }
-          .story-stats { grid-template-columns: 1fr; }
+          .services-grid { grid-template-columns: 1fr; }
+          .hero-cta-group { flex-direction: column; align-items: flex-start; }
+          .process-step { min-height: auto; }
+          .service-card { min-height: auto; }
         }
       `}</style>
       
@@ -744,7 +767,7 @@ export default function Home() {
                   <li><a href="#">Strategy</a></li>
                   <li><a href="#">Work</a></li>
                   <li><a href="#">Services</a></li>
-                  <li><a href="#" className="active">About</a></li>
+                  <li><a href="#">About</a></li>
                   <li><a href="#">Insights</a></li>
                 </ul>
                 <a href="#contact" className="nav-cta">Connect With Us</a>
@@ -757,193 +780,208 @@ export default function Home() {
         <section className="hero">
           <div className="container">
             <div className="hero-content">
-              <div className="hero-badge">Why We're Different</div>
+              <div className="hero-badge">
+                Shining a Light on Businesses
+              </div>
               <h1 className="hero-title">
-                We hate the agencies<br/>
-                of the past. We <span className="illuminate">illuminate</span><br/>
-                the future.
+                We <span className="illuminate">illuminate</span><br/>
+                the path to<br/>
+                exponential growth
               </h1>
               <p className="hero-subtitle">
-                We've generated billions for businesses large and small. We care about each 
-                business like it's our own. This is how we're shining a light on them the Illuminate way.
+                20+ years orchestrating transformative marketing strategies for global brands.
+                No cookie-cutter solutions. No empty promises. Just strategic brilliance that
+                delivers measurable impact.
               </p>
+              <div className="hero-stats">
+                <div className="stat">
+                  <div className="stat-number">$1B+</div>
+                  <div className="stat-label">Revenue Generated</div>
+                </div>
+                <div className="stat">
+                  <div className="stat-number">20+</div>
+                  <div className="stat-label">Years Experience</div>
+                </div>
+                <div className="stat">
+                  <div className="stat-number">Elite</div>
+                  <div className="stat-label">Industry Experts</div>
+                </div>
+              </div>
+              <div className="hero-cta-group">
+                <a href="#contact" className="btn-primary">Start Your Transformation</a>
+                <a href="#" className="btn-text">View Case Studies</a>
+              </div>
             </div>
           </div>
         </section>
         
-        {/* Manifesto Section */}
-        <section className="manifesto">
-          <div className="container">
-            <div className="manifesto-content">
-              <h2 className="manifesto-title">Our Manifesto</h2>
-              
-              <p className="manifesto-text">
-                <strong>We hate the agencies of the past.</strong> The ones that charge millions for PowerPoints. 
-                The ones that disappear after the strategy deck. The ones that treat your business like a line item.
-              </p>
-              
-              <p className="manifesto-text">
-                <strong>We've generated billions in revenue</strong> for businesses of every size. From scrappy startups 
-                to global enterprises. Not through buzzwords and empty promises, but through strategic excellence 
-                that actually works.
-              </p>
-              
-              <p className="manifesto-text">
-                <strong>We care about each business like it's our own.</strong> Your success is our success. 
-                Your challenges become our obsession. We don't rest until we've illuminated every opportunity 
-                and eliminated every obstacle.
-              </p>
-              
-              <p className="manifesto-text">
-                <strong>This is the Illuminate way.</strong> We don't just consult—we transform. We don't just 
-                advise—we execute. We don't just promise—we deliver. We're shining a light on what marketing 
-                can be when it's done right.
-              </p>
-            </div>
-          </div>
-        </section>
-        
-        {/* Values Section */}
-        <section className="values">
+        {/* Services Section */}
+        <section className="services" id="services">
           <div className="container">
             <div className="section-header">
-              <div className="section-badge">Our Values</div>
-              <h2 className="section-title">What drives us forward</h2>
+              <div className="section-badge">Strategic Capabilities</div>
+              <h2 className="section-title">Beyond campaigns.<br/>We architect empires.</h2>
               <p className="section-subtitle">
-                These aren't just words on a wall. They're the principles that guide every decision we make.
+                We don't just run ads. We architect comprehensive marketing ecosystems
+                that drive sustainable growth at enterprise scale.
               </p>
             </div>
             
-            <div className="values-grid">
-              <div className="value-card">
-                <div className="value-icon"></div>
-                <h3 className="value-title">Radical Transparency</h3>
-                <p className="value-description">
-                  No hidden fees. No surprise costs. No black box strategies. 
-                  You see everything we do and why we do it.
+            <div className="services-grid">
+              <div className="service-card">
+                <h3 className="service-name">Strategy</h3>
+                <p className="service-subtitle">Executive Team Advisory</p>
+                <p className="service-description">
+                  Executive advisory for marketing transformation. We align your entire marketing 
+                  ecosystem with business objectives.
                 </p>
+                <ul className="service-features">
+                  <li>Executive strategy sessions</li>
+                  <li>Market opportunity analysis</li>
+                  <li>Competitive positioning</li>
+                  <li>Growth roadmap development</li>
+                </ul>
               </div>
               
-              <div className="value-card">
-                <div className="value-icon"></div>
-                <h3 className="value-title">Obsessive Excellence</h3>
-                <p className="value-description">
-                  Good enough isn't good enough. We obsess over every detail 
-                  until your marketing is nothing short of exceptional.
+              <div className="service-card">
+                <h3 className="service-name">Brand Renaissance</h3>
+                <p className="service-subtitle">Complete Brand Evolution</p>
+                <p className="service-description">
+                  Complete brand evolution from strategy to execution. Position your brand
+                  for market leadership.
                 </p>
+                <ul className="service-features">
+                  <li>Brand strategy & architecture</li>
+                  <li>Visual identity systems</li>
+                  <li>Voice & messaging frameworks</li>
+                  <li>Market positioning</li>
+                </ul>
               </div>
               
-              <div className="value-card">
-                <div className="value-icon"></div>
-                <h3 className="value-title">Results Over Rhetoric</h3>
-                <p className="value-description">
-                  We measure success in revenue, not reports. In growth, not 
-                  graphs. In real business impact, not vanity metrics.
+              <div className="service-card">
+                <h3 className="service-name">Experience Architecture</h3>
+                <p className="service-subtitle">Digital Transformation Projects</p>
+                <p className="service-description">
+                  Architect integrated digital experiences that convert at every touchpoint
+                  across the customer journey.
                 </p>
+                <ul className="service-features">
+                  <li>Customer journey mapping</li>
+                  <li>MarTech stack optimization</li>
+                  <li>Omnichannel orchestration</li>
+                  <li>Experience optimization</li>
+                </ul>
+              </div>
+              
+              <div className="service-card">
+                <h3 className="service-name">Growth Engine Optimization</h3>
+                <p className="service-subtitle">Revenue System Redesign</p>
+                <p className="service-description">
+                  Design and optimize the entire revenue engine from lead generation
+                  through customer retention.
+                </p>
+                <ul className="service-features">
+                  <li>Revenue model optimization</li>
+                  <li>Sales & marketing alignment</li>
+                  <li>Conversion rate optimization</li>
+                  <li>Customer lifetime value</li>
+                </ul>
+              </div>
+              
+              <div className="service-card">
+                <h3 className="service-name">Intelligence-Led Growth</h3>
+                <p className="service-subtitle">Analytics & Optimization Programs</p>
+                <p className="service-description">
+                  Transform data into competitive advantage with advanced analytics
+                  and predictive modeling.
+                </p>
+                <ul className="service-features">
+                  <li>Advanced analytics setup</li>
+                  <li>Predictive modeling</li>
+                  <li>Performance dashboards</li>
+                  <li>ROI optimization</li>
+                </ul>
+              </div>
+              
+              <div className="service-card">
+                <h3 className="service-name">AI & Automation Integration</h3>
+                <p className="service-subtitle">Future-Forward Marketing Systems</p>
+                <p className="service-description">
+                  Implement cutting-edge AI and automation solutions to scale your marketing
+                  operations while maintaining personalized customer experiences.
+                </p>
+                <ul className="service-features">
+                  <li>AI-powered personalization</li>
+                  <li>Marketing automation workflows</li>
+                  <li>Predictive customer analytics</li>
+                  <li>Intelligent content optimization</li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
         
-        {/* Story Section */}
-        <section className="story">
+        {/* How It Works Section */}
+        <section className="how-it-works">
           <div className="container">
-            <div className="story-content">
-              <div className="story-text">
-                <h2>A different kind of consultancy</h2>
-                <p>
-                  We started Illuminate Avenue because we were tired of watching brilliant businesses 
-                  fail due to mediocre marketing. Tired of seeing agencies charge premium prices for 
-                  commodity thinking.
-                </p>
-                <p>
-                  So we built something different. A consultancy that combines the strategic rigor of 
-                  top-tier firms with the agility of a startup and the accountability of a true partner.
-                </p>
-                <p>
-                  Today, we work with businesses that refuse to accept the status quo. Leaders who 
-                  understand that in a world of infinite noise, the only way to win is to be genuinely, 
-                  remarkably different.
-                </p>
-                
-                <div className="story-stats">
-                  <div className="stat">
-                    <div className="stat-number">$3B+</div>
-                    <div className="stat-label">Revenue Generated</div>
-                  </div>
-                  <div className="stat">
-                    <div className="stat-number">200+</div>
-                    <div className="stat-label">Transformations</div>
-                  </div>
-                  <div className="stat">
-                    <div className="stat-number">20+</div>
-                    <div className="stat-label">Years Experience</div>
-                  </div>
-                  <div className="stat">
-                    <div className="stat-number">97%</div>
-                    <div className="stat-label">Client Retention</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="story-visual"></div>
-            </div>
-          </div>
-        </section>
-        
-        {/* Philosophy Section */}
-        <section className="philosophy">
-          <div className="container">
-            <div className="section-header">
-              <div className="section-badge">Our Philosophy</div>
-              <h2 className="section-title">How we think differently</h2>
-            </div>
-            
-            <div className="philosophy-grid">
-              <div className="philosophy-item">
-                <div className="philosophy-number">01</div>
-                <div className="philosophy-content">
-                  <h3>Strategy Without Execution Is Hallucination</h3>
-                  <p>
-                    We don't just deliver decks. We roll up our sleeves and make transformation happen. 
-                    Every strategy comes with a clear execution roadmap and our commitment to see it through.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="philosophy-item">
-                <div className="philosophy-number">02</div>
-                <div className="philosophy-content">
-                  <h3>Your Success Is Our Only Metric</h3>
-                  <p>
-                    We don't celebrate campaigns or creative awards. We celebrate when your revenue grows, 
-                    your market share expands, and your business transforms. Everything else is noise.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="philosophy-item">
-                <div className="philosophy-number">03</div>
-                <div className="philosophy-content">
-                  <h3>Speed Is A Competitive Advantage</h3>
-                  <p>
-                    While others take months to deliver insights, we move at the speed of business. 
-                    Rapid strategic deployment. Quick wins while building for the long term.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        {/* CTA Section */}
-        <section className="cta-section">
-          <div className="container">
-            <h2 className="cta-title">Ready to join the businesses<br/>we've illuminated?</h2>
-            <p className="cta-subtitle">
-              Let's talk about how we can transform your marketing and accelerate your growth.
+            <h2 className="how-it-works-title">Partnership. Not just another project.</h2>
+            <p className="how-it-works-subtitle">
+              We're selective about who we work with. This ensures we're both the right partners,
+              it's the right project, and there's a strong opportunity for effectiveness.
             </p>
-            <a href="#contact" className="btn-primary">Start Your Transformation</a>
+            
+            <div className="process-grid">
+              <div className="process-step">
+                <div className="process-number">01</div>
+                <h3 className="process-title">Assessment</h3>
+                <p className="process-description">
+                  We evaluate your business challenges and growth potential to ensure 
+                  we're the right fit for your transformation goals.
+                </p>
+              </div>
+              
+              <div className="process-step">
+                <div className="process-number">02</div>
+                <h3 className="process-title">Planning</h3>
+                <p className="process-description">
+                  We align on vision, resources, and success metrics to create 
+                  a clear roadmap for your marketing transformation.
+                </p>
+              </div>
+              
+              <div className="process-step">
+                <div className="process-number">03</div>
+                <h3 className="process-title">Execution</h3>
+                <p className="process-description">
+                  We execute the strategy with precision, deploying our capabilities 
+                  to deliver measurable results and competitive advantage.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* About Section */}
+        <section className="about" id="about">
+          <div className="container">
+            <div className="about-content">
+              <div className="about-image">
+                <div className="about-pattern"></div>
+              </div>
+              <div className="about-text">
+                <h2 className="about-title">No BS. No bait & switch.<br/>Just strategic excellence.</h2>
+                <p className="about-description">
+                  We're not your typical consultancy. The same senior strategists who develop
+                  your vision are the ones who oversee execution. We don't upsell services
+                  you don't need. And we're radically transparent about everything we do.
+                </p>
+                <p className="about-description">
+                  With 20+ years leading transformative projects for industry leaders,
+                  we bring enterprise-level thinking to every engagement. Your business
+                  isn't generic—your marketing strategy shouldn't be either.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
         
@@ -951,37 +989,39 @@ export default function Home() {
         <section className="contact" id="contact">
           <div className="container">
             <div className="contact-content">
-              <h2>Let's illuminate your path</h2>
-              <p>Share your challenges. We'll show you the opportunities.</p>
+              <h2 className="contact-title">Ready to illuminate<br/>your potential?</h2>
+              <p className="contact-subtitle">
+                Let's discuss your transformation. Share your challenges and goals.
+              </p>
               
               <form className="contact-form" onSubmit={(e) => { e.preventDefault(); alert('Thank you for your message. We\'ll be in touch soon.'); }}>
-                <div className="form-grid">
+                <div className="form-row">
                   <div className="form-group">
-                    <label className="form-label">Name</label>
-                    <input type="text" name="name" className="form-input" placeholder="Your name" required />
+                    <label className="form-label" htmlFor="name">Name</label>
+                    <input type="text" id="name" name="name" className="form-input" placeholder="Your name" required />
                   </div>
                   <div className="form-group">
-                    <label className="form-label">Email</label>
-                    <input type="email" name="email" className="form-input" placeholder="your@email.com" required />
+                    <label className="form-label" htmlFor="email">Email</label>
+                    <input type="email" id="email" name="email" className="form-input" placeholder="your@email.com" required />
                   </div>
                   <div className="form-group">
-                    <label className="form-label">Company</label>
-                    <input type="text" name="company" className="form-input" placeholder="Company name" required />
+                    <label className="form-label" htmlFor="company">Company</label>
+                    <input type="text" id="company" name="company" className="form-input" placeholder="Company name" required />
                   </div>
                 </div>
                 
-                <div className="form-grid">
+                <div className="form-row">
                   <div className="form-group">
-                    <label className="form-label">Phone</label>
-                    <input type="tel" name="phone" className="form-input" placeholder="+1 (555) 000-0000" />
+                    <label className="form-label" htmlFor="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" className="form-input" placeholder="+1 (555) 000-0000" />
                   </div>
                   <div className="form-group">
-                    <label className="form-label">Website</label>
-                    <input type="url" name="website" className="form-input" placeholder="https://your-website.com" />
+                    <label className="form-label" htmlFor="website">Website</label>
+                    <input type="url" id="website" name="website" className="form-input" placeholder="https://your-website.com" />
                   </div>
                   <div className="form-group">
-                    <label className="form-label">Budget Range</label>
-                    <select name="budget" className="form-input">
+                    <label className="form-label" htmlFor="budget">Budget Range</label>
+                    <select id="budget" name="budget" className="form-input">
                       <option value="">Select budget</option>
                       <option value="50k-100k">$50K - $100K</option>
                       <option value="100k-250k">$100K - $250K</option>
@@ -991,13 +1031,15 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <div style={{ marginBottom: '32px' }}>
-                  <label className="form-label" style={{ display: 'block' }}>Message</label>
-                  <textarea name="message" className="form-textarea" placeholder="Tell us about your business and how we can help illuminate your path" required></textarea>
+                <div className="form-row full-width">
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="message">Message</label>
+                    <textarea id="message" name="message" className="form-textarea" placeholder="Tell us about your project and how we can help illuminate your path to success" required></textarea>
+                  </div>
                 </div>
                 
-                <div className="form-actions">
-                  <button type="submit" className="form-button">Send Message</button>
+                <div className="form-buttons">
+                  <button type="submit" className="form-submit">Send Message</button>
                   <span className="form-note">We'll respond within 24 hours</span>
                 </div>
               </form>
@@ -1006,38 +1048,9 @@ export default function Home() {
         </section>
         
         {/* Footer */}
-        <footer className="footer">
+        <footer>
           <div className="container">
-            <div className="footer-grid">
-              <div>
-                <h3>Illuminate Avenue</h3>
-                <p className="footer-description">Strategic marketing excellence that transforms businesses and creates lasting competitive advantages.</p>
-              </div>
-              <div>
-                <h4>Navigate</h4>
-                <ul>
-                  <li><a href="#">Strategy</a></li>
-                  <li><a href="#">Work</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Insights</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4>Connect</h4>
-                <ul>
-                  <li style={{ color: 'var(--gray-400)' }}>Email:</li>
-                  <li><a href="mailto:info@illuminateavenue.com" className="footer-email">info@illuminateavenue.com</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4>Follow</h4>
-                <p style={{ color: 'var(--gray-400)' }}>Strategic insights and industry intelligence delivered weekly.</p>
-              </div>
-            </div>
-            <div className="footer-bottom">
-              <p>© 2024 Illuminate Avenue. All rights reserved. | Strategic Marketing Excellence</p>
-            </div>
+            <p>© 2024 Illuminate Avenue. Strategic Marketing Excellence.</p>
           </div>
         </footer>
       </div>
