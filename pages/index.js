@@ -1,6 +1,21 @@
 import Head from 'next/head'
+import { useEffect } from 'react'
 
 export default function Home() {
+  useEffect(() => {
+    // Header scroll effect
+    const handleScroll = () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
     <>
       <Head>
