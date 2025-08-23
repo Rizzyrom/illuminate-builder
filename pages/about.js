@@ -1,167 +1,227 @@
 import Head from 'next/head'
-import { BuilderComponent, builder } from '@builder.io/react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-export default function About({ builderJson }) {
+export default function About() {
   return (
     <>
       <Head>
-        <title>About - Illuminate Avenue</title>
-        <meta name="description" content="Learn about our strategic marketing expertise and 20+ years of experience delivering transformative results for global brands." />
+        <title>About - Illuminate Avenue | Why We're Different</title>
+        <meta name="description" content="We hate the agencies of the past. We've generated billions for businesses large and small. We care about each business like it's our own." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      {builderJson ? (
-        <BuilderComponent model="page" content={builderJson} />
-      ) : (
-        <main className="about-page">
-          {/* Navigation */}
-          <header className="navbar-wrapper">
-            <nav className="navbar-container">
-              <div className="container-navigation">
-                <div className="nav-content-wrapper">
-                  <a href="/" className="nav-brand-link">
-                    <div className="brand-text">Illuminate Avenue</div>
-                  </a>
-                  <div className="nav-menu-wrapper">
-                    <a href="/strategy" className="nav-link-item">Strategy</a>
-                    <a href="/work" className="nav-link-item">Work</a>
-                    <a href="/services" className="nav-link-item">Services</a>
-                    <a href="/about" className="nav-link-item active">About</a>
-                    <a href="/insights" className="nav-link-item">Insights</a>
-                  </div>
-                  <a href="/contact" className="nav-cta-button">
-                    <div className="button-text">Connect With Us</div>
-                  </a>
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="container">
+          <div className="hero-content">
+            <div className="hero-badge">Why We're Different</div>
+            <h1 className="hero-title">
+              We hate the agencies<br/>
+              of the past. We <span className="illuminate">illuminate</span><br/>
+              the future.
+            </h1>
+            <p className="hero-subtitle">
+              We've generated billions for businesses large and small. We care about each 
+              business like it's our own. This is how we're shining a light on them the Illuminate way.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      {/* Manifesto Section */}
+      <section className="manifesto">
+        <div className="container">
+          <div className="manifesto-content">
+            <h2 className="manifesto-title">Our Manifesto</h2>
+            
+            <p className="manifesto-text">
+              <strong>We hate the agencies of the past.</strong> The ones that charge millions for PowerPoints. 
+              The ones that disappear after the strategy deck. The ones that treat your business like a line item.
+            </p>
+            
+            <p className="manifesto-text">
+              <strong>We've generated billions in revenue</strong> for businesses of every size. From scrappy startups 
+              to global enterprises. Not through buzzwords and empty promises, but through strategic excellence 
+              that actually works.
+            </p>
+            
+            <p className="manifesto-text">
+              <strong>We care about each business like it's our own.</strong> Your success is our success. 
+              Your challenges become our obsession. We don't rest until we've illuminated every opportunity 
+              and eliminated every obstacle.
+            </p>
+            
+            <p className="manifesto-text">
+              <strong>This is the Illuminate way.</strong> We don't just consult—we transform. We don't just 
+              advise—we execute. We don't just promise—we deliver. We're shining a light on what marketing 
+              can be when it's done right.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      {/* Values Section */}
+      <section className="values">
+        <div className="container">
+          <div className="section-header">
+            <div className="section-badge">Our Values</div>
+            <h2 className="section-title">What drives us forward</h2>
+            <p className="section-subtitle">
+              These aren't just words on a wall. They're the principles that guide every decision we make.
+            </p>
+          </div>
+          
+          <div className="values-grid">
+            <div className="value-card">
+              <div className="value-icon"></div>
+              <h3 className="value-title">Radical Transparency</h3>
+              <p className="value-description">
+                No hidden fees. No surprise costs. No black box strategies. 
+                You see everything we do and why we do it.
+              </p>
+            </div>
+            
+            <div className="value-card">
+              <div className="value-icon"></div>
+              <h3 className="value-title">Obsessive Excellence</h3>
+              <p className="value-description">
+                Good enough isn't good enough. We obsess over every detail 
+                until your marketing is nothing short of exceptional.
+              </p>
+            </div>
+            
+            <div className="value-card">
+              <div className="value-icon"></div>
+              <h3 className="value-title">Results Over Rhetoric</h3>
+              <p className="value-description">
+                We measure success in revenue, not reports. In growth, not 
+                graphs. In real business impact, not vanity metrics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Story Section */}
+      <section className="story">
+        <div className="container">
+          <div className="story-content">
+            <div className="story-text">
+              <h2>A different kind of consultancy</h2>
+              <p>
+                We started Illuminate Avenue because we were tired of watching brilliant businesses 
+                fail due to mediocre marketing. Tired of seeing agencies charge premium prices for 
+                commodity thinking.
+              </p>
+              <p>
+                So we built something different. A consultancy that combines the strategic rigor of 
+                top-tier firms with the agility of a startup and the accountability of a true partner.
+              </p>
+              <p>
+                Today, we work with businesses that refuse to accept the status quo. Leaders who 
+                understand that in a world of infinite noise, the only way to win is to be genuinely, 
+                remarkably different.
+              </p>
+              
+              <div className="story-stats">
+                <div className="stat">
+                  <div className="stat-number">$3B+</div>
+                  <div className="stat-label">Revenue Generated</div>
                 </div>
-              </div>
-            </nav>
-          </header>
-
-          {/* Hero Section */}
-          <section className="page-hero-section">
-            <div className="container-hero">
-              <div className="hero-content-wrapper">
-                <h1 className="page-main-heading">About Illuminate Avenue</h1>
-                <div className="page-subtitle-text">Strategic marketing excellence built on 20+ years of transformative results</div>
+                <div className="stat">
+                  <div className="stat-number">200+</div>
+                  <div className="stat-label">Transformations</div>
+                </div>
+                <div className="stat">
+                  <div className="stat-number">20+</div>
+                  <div className="stat-label">Years Experience</div>
+                </div>
+                <div className="stat">
+                  <div className="stat-number">97%</div>
+                  <div className="stat-label">Client Retention</div>
+                </div>
               </div>
             </div>
-          </section>
-
-          {/* Story Section */}
-          <section className="story-section">
-            <div className="container-story">
-              <div className="story-content-grid">
-                <div className="story-text-wrapper">
-                  <h2 className="story-heading">Our Story</h2>
-                  <div className="story-text">
-                    Founded on the principle that every business deserves strategic marketing excellence, Illuminate Avenue has spent over two decades perfecting the art and science of transformative marketing.
-                  </div>
-                  <div className="story-text">
-                    We don't just execute campaigns—we architect comprehensive marketing ecosystems that drive sustainable growth at enterprise scale. Our approach combines strategic thinking with flawless execution, ensuring every initiative contributes to your larger business objectives.
-                  </div>
-                </div>
-                <div className="story-image-wrapper">
-                  <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80" alt="Strategic team planning" className="story-image" />
-                </div>
+            
+            <div className="story-visual"></div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Philosophy Section */}
+      <section className="philosophy">
+        <div className="container">
+          <div className="section-header">
+            <div className="section-badge">Our Philosophy</div>
+            <h2 className="section-title">How we think differently</h2>
+          </div>
+          
+          <div className="philosophy-grid">
+            <div className="philosophy-item">
+              <div className="philosophy-number">01</div>
+              <div className="philosophy-content">
+                <h3>Strategy Without Execution Is Hallucination</h3>
+                <p>
+                  We don't just deliver decks. We roll up our sleeves and make transformation happen. 
+                  Every strategy comes with a clear execution roadmap and our commitment to see it through.
+                </p>
               </div>
             </div>
-          </section>
-
-          {/* Values Section */}
-          <section className="values-section">
-            <div className="container-values">
-              <h2 className="values-heading">Our Values</h2>
-              <div className="values-grid">
-                <div className="value-item">
-                  <h3 className="value-title">Strategic Excellence</h3>
-                  <div className="value-description">Every decision is rooted in deep strategic thinking and market intelligence.</div>
-                </div>
-                <div className="value-item">
-                  <h3 className="value-title">Radical Transparency</h3>
-                  <div className="value-description">Open communication and honest reporting on every aspect of our partnership.</div>
-                </div>
-                <div className="value-item">
-                  <h3 className="value-title">Measurable Impact</h3>
-                  <div className="value-description">Results that move the needle on your most important business metrics.</div>
-                </div>
-                <div className="value-item">
-                  <h3 className="value-title">Partnership Focus</h3>
-                  <div className="value-description">We're selective about our clients to ensure mutual success and long-term value.</div>
-                </div>
+            
+            <div className="philosophy-item">
+              <div className="philosophy-number">02</div>
+              <div className="philosophy-content">
+                <h3>Your Success Is Our Only Metric</h3>
+                <p>
+                  We don't celebrate campaigns or creative awards. We celebrate when your revenue grows, 
+                  your market share expands, and your business transforms. Everything else is noise.
+                </p>
               </div>
             </div>
-          </section>
-
-          {/* Team Section */}
-          <section className="team-section">
-            <div className="container-team">
-              <h2 className="team-heading">Leadership Team</h2>
-              <div className="team-grid">
-                <div className="team-member">
-                  <div className="member-image">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="CEO" className="member-photo" />
-                  </div>
-                  <h3 className="member-name">Strategic Leadership</h3>
-                  <div className="member-title">Chief Executive Officer</div>
-                  <div className="member-bio">20+ years of strategic marketing leadership across Fortune 500 companies.</div>
-                </div>
-                <div className="team-member">
-                  <div className="member-image">
-                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="CMO" className="member-photo" />
-                  </div>
-                  <h3 className="member-name">Marketing Excellence</h3>
-                  <div className="member-title">Chief Marketing Officer</div>
-                  <div className="member-bio">Expert in brand transformation and digital marketing ecosystems.</div>
-                </div>
-                <div className="team-member">
-                  <div className="member-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="CTO" className="member-photo" />
-                  </div>
-                  <h3 className="member-name">Technology Innovation</h3>
-                  <div className="member-title">Chief Technology Officer</div>
-                  <div className="member-bio">Leading AI and automation integration for marketing transformation.</div>
-                </div>
+            
+            <div className="philosophy-item">
+              <div className="philosophy-number">03</div>
+              <div className="philosophy-content">
+                <h3>Speed Is A Competitive Advantage</h3>
+                <p>
+                  While others take months to deliver insights, we move at the speed of business. 
+                  Rapid strategic deployment. Quick wins while building for the long term.
+                </p>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
+      
+      {/* CTA Section */}
+      <section className="cta-section">
+        <div className="container">
+          <h2 className="cta-title">Ready to join the businesses<br/>we've illuminated?</h2>
+          <p className="cta-subtitle">
+            Let's talk about how we can transform your marketing and accelerate your growth.
+          </p>
+          <a href="/contact" className="btn-primary">Start Your Transformation</a>
+        </div>
+      </section>
 
-          {/* CTA Section */}
-          <section className="cta-section">
-            <div className="container-cta">
-              <div className="cta-content-wrapper">
-                <h2 className="cta-heading">Ready to work together?</h2>
-                <div className="cta-text">Let's discuss how we can accelerate your marketing transformation.</div>
-                <a href="/contact" className="cta-button">
-                  <div className="button-text">Start the Conversation</div>
-                </a>
-              </div>
-            </div>
-          </section>
-
-          {/* Footer */}
-          <footer className="footer-section">
-            <div className="container-footer">
-              <div className="footer-content-wrapper">
-                <div className="footer-copyright-text">© 2024 Illuminate Avenue. Strategic Marketing Excellence.</div>
-              </div>
-            </div>
-          </footer>
-        </main>
-      )}
+      <Footer />
+      
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          // Header scroll effect
+          window.addEventListener('scroll', () => {
+            const header = document.querySelector('.site-header');
+            if (window.scrollY > 50) {
+              header.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+            } else {
+              header.style.boxShadow = 'none';
+            }
+          });
+        `
+      }} />
     </>
   )
-}
-
-export async function getStaticProps() {
-  const builderJson = await builder
-    .get('page', {
-      url: '/about',
-    })
-    .promise()
-
-  return {
-    props: {
-      builderJson: builderJson || null,
-    },
-    revalidate: 10,
-  }
 }
