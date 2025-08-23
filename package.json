@@ -1,35 +1,22 @@
 {
-  "name": "illuminate-avenue-builder",
+  "name": "illuminate-avenue",
   "version": "1.0.0",
-  "description": "Illuminate Avenue strategic marketing website built for Builder.io",
+  "description": "Illuminate Avenue - Strategic Marketing Excellence",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
-    "@builder.io/react": "^3.2.7",
-    "@builder.io/sdk": "^2.2.6",
-    "next": "14.0.0",
+    "next": "^14.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@builder.io/react": "^3.2.7",
+    "@builder.io/sdk": "^2.4.1"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.0",
-    "typescript": "^5"
-  },
-  "keywords": [
-    "builder.io",
-    "marketing",
-    "strategic",
-    "illuminate-avenue"
-  ],
-  "author": "Illuminate Avenue",
-  "license": "MIT"
+    "eslint": "^8.48.0",
+    "eslint-config-next": "^14.0.0"
+  }
 }

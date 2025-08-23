@@ -2,14 +2,21 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  env: {
-    BUILDER_PUBLIC_KEY: process.env.BUILDER_PUBLIC_KEY,
-  },
   images: {
-    domains: ['cdn.builder.io', 'images.unsplash.com'],
+    domains: ['cdn.builder.io'],
   },
-  experimental: {
-    appDir: false,
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+        ],
+      },
+    ]
   },
 }
 
