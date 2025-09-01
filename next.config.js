@@ -25,6 +25,12 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
 
+  // Skip static optimization to fix build errors
+  experimental: {
+    ...nextConfig.experimental,
+    skipTrailingSlashRedirect: true,
+  },
+
   // Headers for performance and security
   async headers() {
     return [
