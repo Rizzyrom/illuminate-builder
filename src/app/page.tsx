@@ -1,5 +1,6 @@
 export default function MaintenancePage() {
-  const isMaintenanceMode = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true'
+  // Force maintenance mode to true for deployment
+  const isMaintenanceMode = true
 
   if (isMaintenanceMode) {
     return (
