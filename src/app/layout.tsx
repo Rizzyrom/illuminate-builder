@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Analytics from '@/components/Analytics';
+import MaintenanceMode from '@/components/MaintenanceMode';
 
 export const metadata: Metadata = {
   title: "Illuminate Avenue | Strategic Marketing Excellence",
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://illuminate-avenue.com",
+    url: "https://illuminateavenue.com",
     title: "Illuminate Avenue | Strategic Marketing Excellence",
     description: "We illuminate the path to exponential growth through strategic marketing excellence. Transform your business with proven methodologies and expert guidance.",
     siteName: "Illuminate Avenue",
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     google: "your-google-site-verification",
   },
   alternates: {
-    canonical: "https://illuminate-avenue.com",
+    canonical: "https://illuminateavenue.com",
   },
 };
 
@@ -52,12 +53,12 @@ export default function RootLayout({
     "@type": "Organization",
     "name": "Illuminate Avenue",
     "description": "Strategic marketing consultancy specializing in business transformation and exponential growth.",
-    "url": "https://illuminate-avenue.com",
-    "logo": "https://illuminate-avenue.com/logo.png",
+    "url": "https://illuminateavenue.com",
+    "logo": "https://illuminateavenue.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Customer Service",
-      "email": "hello@illuminate-avenue.com"
+      "email": "hello@illuminateavenue.com"
     },
     "address": {
       "@type": "PostalAddress",
@@ -79,6 +80,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <Analytics />
+        <MaintenanceMode />
         {children}
       </body>
     </html>
