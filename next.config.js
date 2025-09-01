@@ -27,7 +27,7 @@ const nextConfig = {
 
   // Skip static optimization to fix build errors
   experimental: {
-    ...nextConfig.experimental,
+    optimizePackageImports: ['@tinacms/cli'],
     skipTrailingSlashRedirect: true,
   },
 
