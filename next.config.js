@@ -25,11 +25,8 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
 
-  // Skip static optimization to fix build errors
-  experimental: {
-    optimizePackageImports: ['@tinacms/cli'],
-    skipTrailingSlashRedirect: true,
-  },
+  // Disable static generation
+  output: 'standalone',
 
   // Headers for performance and security
   async headers() {
