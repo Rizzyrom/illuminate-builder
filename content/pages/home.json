@@ -1,0 +1,104 @@
+{
+  "title": "Home - Illuminate Avenue",
+  "description": "Strategic marketing excellence for exponential growth",
+  "hero": {
+    "badge": "Strategic Marketing Excellence",
+    "title": "Illuminate the Path to Exponential Growth",
+    "subtitle": "We transform businesses through data-driven marketing strategies, innovative campaigns, and proven methodologies that deliver measurable results.",
+    "cta": {
+      "text": "Start Your Transformation",
+      "href": "#contact"
+    },
+    "stats": [
+      {
+        "value": "500+",
+        "label": "Campaigns Launched"
+      },
+      {
+        "value": "300%",
+        "label": "Average ROI Increase"
+      },
+      {
+        "value": "98%",
+        "label": "Client Satisfaction"
+      },
+      {
+        "value": "50M+",
+        "label": "Revenue Generated"
+      }
+    ]
+  },
+  "services": {
+    "badge": "Our Expertise",
+    "title": "Strategic Marketing Services",
+    "subtitle": "Comprehensive solutions designed to elevate your brand and accelerate growth through proven methodologies.",
+    "serviceCards": [
+      {
+        "title": "Strategic Planning",
+        "description": "Data-driven marketing strategies tailored to your business objectives and market positioning.",
+        "icon": "strategy"
+      },
+      {
+        "title": "Digital Transformation",
+        "description": "Complete digital ecosystem optimization including SEO, PPC, social media, and content marketing.",
+        "icon": "digital"
+      },
+      {
+        "title": "Brand Development",
+        "description": "Comprehensive brand identity creation and enhancement that resonates with your target audience.",
+        "icon": "brand"
+      },
+      {
+        "title": "Performance Analytics",
+        "description": "Advanced tracking, measurement, and optimization to maximize your marketing ROI.",
+        "icon": "analytics"
+      },
+      {
+        "title": "Campaign Management",
+        "description": "End-to-end campaign execution across all channels with continuous optimization.",
+        "icon": "campaign"
+      },
+      {
+        "title": "Growth Consulting",
+        "description": "Strategic guidance to scale your business sustainably and achieve long-term success.",
+        "icon": "growth"
+      }
+    ]
+  },
+  "about": {
+    "title": "Why Choose Illuminate Avenue",
+    "content": {
+      "type": "root",
+      "children": [
+        {
+          "type": "p",
+          "children": [
+            {
+              "type": "text",
+              "text": "At Illuminate Avenue, we don't just create marketing campaigns – we architect transformative growth experiences. Our team combines strategic thinking with creative execution to deliver results that exceed expectations."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "children": [
+            {
+              "type": "text",
+              "text": "With years of experience across diverse industries, we understand that every business is unique. Our approach is tailored, data-driven, and focused on sustainable growth that stands the test of time."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Ready to Transform Your Business?",
+    "subtitle": "Let's discuss how our strategic marketing expertise can accelerate your growth.",
+    "form": {
+      "nameLabel": "Full Name",
+      "emailLabel": "Email Address",
+      "messageLabel": "Tell us about your project",
+      "submitText": "Get Started Today"
+    }
+  }
+}
