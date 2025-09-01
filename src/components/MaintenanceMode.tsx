@@ -32,7 +32,7 @@ export default function MaintenanceMode() {
         
         <h1 className="text-2xl font-bold mb-4">Under Maintenance</h1>
         <p className="text-gray-300 mb-6">
-          We're currently updating our website to serve you better. 
+          We&apos;re currently updating our website to serve you better. 
           Please check back soon!
         </p>
         
