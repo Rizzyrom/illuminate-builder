@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Analytics from '@/components/Analytics';
-import MaintenanceMode from '@/components/MaintenanceMode';
 
 export const metadata: Metadata = {
   title: "Illuminate Avenue | Strategic Marketing Excellence",
@@ -79,8 +77,6 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <Analytics />
-        <MaintenanceMode />
         {children}
       </body>
     </html>
