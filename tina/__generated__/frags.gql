@@ -1,0 +1,79 @@
+fragment PageParts on Page {
+  __typename
+  title
+  description
+  hero {
+    __typename
+    badge
+    title
+    subtitle
+    cta {
+      __typename
+      text
+      href
+    }
+    stats {
+      __typename
+      value
+      label
+    }
+  }
+  services {
+    __typename
+    badge
+    title
+    subtitle
+    serviceCards {
+      __typename
+      title
+      description
+      icon
+    }
+  }
+  about {
+    __typename
+    title
+    content
+  }
+  contact {
+    __typename
+    title
+    subtitle
+    form {
+      __typename
+      nameLabel
+      emailLabel
+      messageLabel
+      submitText
+    }
+  }
+}
+
+fragment GlobalParts on Global {
+  __typename
+  site {
+    __typename
+    logoText
+    navigation {
+      __typename
+      links {
+        __typename
+        label
+        href
+      }
+    }
+    footer {
+      __typename
+      content
+    }
+  }
+}
+
+fragment BlogParts on Blog {
+  __typename
+  title
+  description
+  date
+  featuredImage
+  body
+}

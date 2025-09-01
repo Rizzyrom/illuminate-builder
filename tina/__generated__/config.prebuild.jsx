@@ -1,24 +1,23 @@
+// tina/config.ts
 import { defineConfig } from "tinacms";
-
-// Your hosting provider likely exposes this as an environment variable
-const branch =
-  process.env.GITHUB_BRANCH ||
-  process.env.VERCEL_GIT_COMMIT_REF ||
-  process.env.HEAD ||
-  "main";
-
-export default defineConfig({
+var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.HEAD || "main";
+var config_default = defineConfig({
   branch,
-
+  // Get this from tina.io
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+  // Get this from tina.io
+  token: process.env.TINA_TOKEN,
+  // Local client for development
+  localContentPath: "./content",
   build: {
     outputFolder: "admin",
-    publicFolder: "public",
+    publicFolder: "public"
   },
   media: {
     tina: {
       mediaRoot: "",
-      publicFolder: "public",
-    },
+      publicFolder: "public"
+    }
   },
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
@@ -33,12 +32,12 @@ export default defineConfig({
             name: "title",
             label: "Title",
             isTitle: true,
-            required: true,
+            required: true
           },
           {
             type: "string",
             name: "description",
-            label: "Description",
+            label: "Description"
           },
           {
             type: "object",
@@ -48,17 +47,17 @@ export default defineConfig({
               {
                 type: "string",
                 name: "badge",
-                label: "Badge Text",
+                label: "Badge Text"
               },
               {
                 type: "string",
                 name: "title",
-                label: "Hero Title",
+                label: "Hero Title"
               },
               {
                 type: "string",
                 name: "subtitle",
-                label: "Hero Subtitle",
+                label: "Hero Subtitle"
               },
               {
                 type: "object",
@@ -68,14 +67,14 @@ export default defineConfig({
                   {
                     type: "string",
                     name: "text",
-                    label: "Button Text",
+                    label: "Button Text"
                   },
                   {
                     type: "string",
                     name: "href",
-                    label: "Button Link",
-                  },
-                ],
+                    label: "Button Link"
+                  }
+                ]
               },
               {
                 type: "object",
@@ -86,16 +85,16 @@ export default defineConfig({
                   {
                     type: "string",
                     name: "value",
-                    label: "Stat Value",
+                    label: "Stat Value"
                   },
                   {
                     type: "string",
                     name: "label",
-                    label: "Stat Label",
-                  },
-                ],
-              },
-            ],
+                    label: "Stat Label"
+                  }
+                ]
+              }
+            ]
           },
           {
             type: "object",
@@ -105,17 +104,17 @@ export default defineConfig({
               {
                 type: "string",
                 name: "badge",
-                label: "Badge Text",
+                label: "Badge Text"
               },
               {
                 type: "string",
                 name: "title",
-                label: "Services Title",
+                label: "Services Title"
               },
               {
                 type: "string",
                 name: "subtitle",
-                label: "Services Subtitle",
+                label: "Services Subtitle"
               },
               {
                 type: "object",
@@ -126,21 +125,21 @@ export default defineConfig({
                   {
                     type: "string",
                     name: "title",
-                    label: "Service Title",
+                    label: "Service Title"
                   },
                   {
                     type: "string",
                     name: "description",
-                    label: "Service Description",
+                    label: "Service Description"
                   },
                   {
                     type: "string",
                     name: "icon",
-                    label: "Service Icon",
-                  },
-                ],
-              },
-            ],
+                    label: "Service Icon"
+                  }
+                ]
+              }
+            ]
           },
           {
             type: "object",
@@ -150,14 +149,14 @@ export default defineConfig({
               {
                 type: "string",
                 name: "title",
-                label: "About Title",
+                label: "About Title"
               },
               {
                 type: "rich-text",
                 name: "content",
-                label: "About Content",
-              },
-            ],
+                label: "About Content"
+              }
+            ]
           },
           {
             type: "object",
@@ -167,12 +166,12 @@ export default defineConfig({
               {
                 type: "string",
                 name: "title",
-                label: "Contact Title",
+                label: "Contact Title"
               },
               {
                 type: "string",
                 name: "subtitle",
-                label: "Contact Subtitle",
+                label: "Contact Subtitle"
               },
               {
                 type: "object",
@@ -182,28 +181,28 @@ export default defineConfig({
                   {
                     type: "string",
                     name: "nameLabel",
-                    label: "Name Field Label",
+                    label: "Name Field Label"
                   },
                   {
                     type: "string",
                     name: "emailLabel",
-                    label: "Email Field Label",
+                    label: "Email Field Label"
                   },
                   {
                     type: "string",
                     name: "messageLabel",
-                    label: "Message Field Label",
+                    label: "Message Field Label"
                   },
                   {
                     type: "string",
                     name: "submitText",
-                    label: "Submit Button Text",
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                    label: "Submit Button Text"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         name: "global",
@@ -218,7 +217,7 @@ export default defineConfig({
               {
                 type: "string",
                 name: "logoText",
-                label: "Logo Text",
+                label: "Logo Text"
               },
               {
                 type: "object",
@@ -234,16 +233,16 @@ export default defineConfig({
                       {
                         type: "string",
                         name: "label",
-                        label: "Link Label",
+                        label: "Link Label"
                       },
                       {
                         type: "string",
                         name: "href",
-                        label: "Link URL",
-                      },
-                    ],
-                  },
-                ],
+                        label: "Link URL"
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 type: "object",
@@ -253,13 +252,13 @@ export default defineConfig({
                   {
                     type: "rich-text",
                     name: "content",
-                    label: "Footer Content",
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                    label: "Footer Content"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         name: "blog",
@@ -271,31 +270,34 @@ export default defineConfig({
             name: "title",
             label: "Title",
             isTitle: true,
-            required: true,
+            required: true
           },
           {
             type: "string",
             name: "description",
-            label: "Description",
+            label: "Description"
           },
           {
             type: "datetime",
             name: "date",
-            label: "Date",
+            label: "Date"
           },
           {
             type: "image",
             name: "featuredImage",
-            label: "Featured Image",
+            label: "Featured Image"
           },
           {
             type: "rich-text",
             name: "body",
             label: "Body",
-            isBody: true,
-          },
-        ],
-      },
-    ],
-  },
+            isBody: true
+          }
+        ]
+      }
+    ]
+  }
 });
+export {
+  config_default as default
+};
