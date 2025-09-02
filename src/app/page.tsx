@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
-import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { useEffect } from 'react';
 
 async function getPageData() {
   const filePath = join(process.cwd(), 'content', 'pages', 'home.json');
@@ -14,10 +14,9 @@ async function getGlobalData() {
   return JSON.parse(fileContent);
 }
 
-export default async function HomePage() {
+export default async function Home() {
   const page = await getPageData();
   const globalData = await getGlobalData();
-  
   const site = globalData.site;
 
   return (
@@ -185,7 +184,7 @@ export default async function HomePage() {
         
         .hero-stats {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 32px;
           padding: 24px 0;
           margin-bottom: 32px;
@@ -217,6 +216,7 @@ export default async function HomePage() {
           align-items: center;
         }
         
+        /* Fixed Button Styles */
         .btn-primary {
           padding: 16px 32px;
           background: var(--black);
@@ -264,102 +264,6 @@ export default async function HomePage() {
           transform: translateX(4px);
         }
         
-        /* Services Section */
-        .services {
-          padding: 120px 0;
-          background: var(--white);
-        }
-        
-        .services-header {
-          text-align: center;
-          margin-bottom: 80px;
-        }
-        
-        .section-badge {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          padding: 8px 20px;
-          background: var(--gray-100);
-          color: var(--gray-600);
-          border-radius: 20px;
-          font-family: var(--font-accent);
-          font-size: 13px;
-          font-weight: 600;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          margin-bottom: 24px;
-        }
-        
-        .section-title {
-          font-family: var(--font-display);
-          font-size: clamp(40px, 5vw, 64px);
-          font-weight: 400;
-          line-height: 1.1;
-          margin-bottom: 24px;
-          color: var(--black);
-        }
-        
-        .section-subtitle {
-          font-size: 20px;
-          color: var(--gray-600);
-          max-width: 700px;
-          margin: 0 auto;
-        }
-        
-        .services-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-          gap: 48px;
-        }
-        
-        .service-card {
-          background: var(--white);
-          border: 1px solid var(--gray-200);
-          border-radius: 12px;
-          padding: 48px 40px;
-          transition: all 0.3s;
-        }
-        
-        .service-card:hover {
-          border-color: var(--gold);
-          box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-          transform: translateY(-8px);
-        }
-        
-        .service-icon {
-          width: 64px;
-          height: 64px;
-          background: var(--gold);
-          border-radius: 12px;
-          margin-bottom: 24px;
-        }
-        
-        .service-title {
-          font-family: var(--font-display);
-          font-size: 24px;
-          font-weight: 600;
-          margin-bottom: 16px;
-          color: var(--black);
-        }
-        
-        .service-description {
-          color: var(--gray-600);
-          line-height: 1.6;
-        }
-        
-        /* About Section */
-        .about {
-          padding: 120px 0;
-          background: var(--gray-100);
-        }
-        
-        .about-content {
-          max-width: 800px;
-          margin: 0 auto;
-          text-align: center;
-        }
-        
         /* Contact Section */
         .contact {
           padding: 120px 0;
@@ -395,8 +299,6 @@ export default async function HomePage() {
           .container { padding: 0 24px; }
           .nav-menu { display: none; }
           .hero-cta-group { flex-direction: column; align-items: flex-start; }
-          .hero-stats { grid-template-columns: repeat(2, 1fr); }
-          .services-grid { grid-template-columns: 1fr; }
         }
       `}</style>
       
@@ -441,39 +343,7 @@ export default async function HomePage() {
               </div>
               <div className="hero-cta-group">
                 <a href={page.hero.cta.href} className="btn-primary">{page.hero.cta.text}</a>
-                <a href="/insights" className="btn-text">Read Our Insights</a>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        {/* Services Section */}
-        <section className="services">
-          <div className="container">
-            <div className="services-header">
-              <div className="section-badge">{page.services.badge}</div>
-              <h2 className="section-title">{page.services.title}</h2>
-              <p className="section-subtitle">{page.services.subtitle}</p>
-            </div>
-            <div className="services-grid">
-              {page.services.serviceCards.map((service: any, index: number) => (
-                <div key={index} className="service-card">
-                  <div className="service-icon"></div>
-                  <h3 className="service-title">{service.title}</h3>
-                  <p className="service-description">{service.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        
-        {/* About Section */}
-        <section className="about">
-          <div className="container">
-            <div className="about-content">
-              <h2 className="section-title">{page.about.title}</h2>
-              <div className="section-subtitle">
-                <TinaMarkdown content={page.about.content} />
+                <a href="/insights" className="btn-text">View Case Studies</a>
               </div>
             </div>
           </div>
@@ -482,8 +352,8 @@ export default async function HomePage() {
         {/* Contact Section */}
         <section className="contact" id="contact">
           <div className="container">
-            <h2>{page.contact.title}</h2>
-            <p>{page.contact.subtitle}</p>
+            <h2>Ready to illuminate<br/>your potential?</h2>
+            <p>Let&apos;s discuss your transformation. Share your challenges and goals.</p>
             <a href="mailto:hello@illuminateavenue.com" className="btn-primary">Get In Touch</a>
           </div>
         </section>
@@ -491,14 +361,7 @@ export default async function HomePage() {
         {/* Footer */}
         <footer>
           <div className="container">
-            <div className="text-center">
-              <div className="text-2xl font-bold mb-4">
-                {site.logoText}
-              </div>
-              <div className="text-gray-400">
-                <TinaMarkdown content={site.footer.content} />
-              </div>
-            </div>
+            <p>© 2024 Illuminate Avenue. Strategic Marketing Excellence.</p>
           </div>
         </footer>
       </div>
