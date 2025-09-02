@@ -2,11 +2,12 @@
 
 import dynamic from "next/dynamic";
 
-// Dynamically import TinaCMS admin
-const TinaCMS = dynamic(() => import("tinacms"), {
-  ssr: false,
-});
+// Dynamically import the admin
+const AdminPage = dynamic(
+  () => import("tinacms/dist/admin").then((m) => m.default),
+  { ssr: false }
+);
 
-export default function AdminPage() {
-  return <TinaCMS />;
+export default function Admin() {
+  return <AdminPage />;
 }
