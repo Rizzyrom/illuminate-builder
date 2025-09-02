@@ -1,0 +1,80 @@
+{
+  "title": "Insights - Illuminate Avenue",
+  "description": "Marketing insights, trends, and thought leadership to fuel your growth",
+  "hero": {
+    "badge": "Insights & Expertise",
+    "title": "Marketing Intelligence That Drives Growth",
+    "subtitle": "Stay ahead of the curve with our latest insights, industry trends, and strategic thinking on marketing excellence and business growth."
+  },
+  "featuredInsight": {
+    "title": "The Evolution of B2B Marketing: Data-Driven Strategies for 2024",
+    "excerpt": "Discover how successful B2B companies are leveraging advanced analytics, AI-powered personalization, and integrated marketing approaches to drive exponential growth.",
+    "readTime": "8 min read",
+    "category": "Strategic Marketing",
+    "date": "January 15, 2024"
+  },
+  "insights": [
+    {
+      "title": "Customer Acquisition Cost: The Hidden Metrics That Matter",
+      "excerpt": "Beyond basic CAC calculations - understanding the nuanced metrics that truly impact your bottom line and long-term business sustainability.",
+      "category": "Analytics",
+      "readTime": "6 min read",
+      "date": "January 12, 2024",
+      "tags": ["Analytics", "CAC", "ROI"]
+    },
+    {
+      "title": "Content Marketing Revolution: Quality vs Quantity in 2024",
+      "excerpt": "How leading brands are shifting from content volume to strategic, high-impact content that drives meaningful engagement and conversions.",
+      "category": "Content Strategy",
+      "readTime": "7 min read", 
+      "date": "January 10, 2024",
+      "tags": ["Content Marketing", "Strategy", "Engagement"]
+    },
+    {
+      "title": "The Psychology of B2B Decision Making",
+      "excerpt": "Understanding the cognitive biases and decision-making frameworks that influence B2B purchases and how to align your marketing accordingly.",
+      "category": "Psychology",
+      "readTime": "9 min read",
+      "date": "January 8, 2024",
+      "tags": ["B2B", "Psychology", "Decision Making"]
+    },
+    {
+      "title": "Marketing Attribution: Multi-Touch vs Single-Touch Models",
+      "excerpt": "A comprehensive analysis of attribution models and how to choose the right approach for your business goals and customer journey complexity.",
+      "category": "Analytics",
+      "readTime": "10 min read",
+      "date": "January 5, 2024", 
+      "tags": ["Attribution", "Analytics", "Measurement"]
+    },
+    {
+      "title": "Brand Positioning in Competitive Markets",
+      "excerpt": "Strategic frameworks for establishing and maintaining distinctive brand positioning even in crowded, competitive market landscapes.",
+      "category": "Branding",
+      "readTime": "8 min read",
+      "date": "January 3, 2024",
+      "tags": ["Branding", "Positioning", "Competition"]
+    },
+    {
+      "title": "The Future of Marketing Automation",
+      "excerpt": "Emerging trends in marketing automation, AI integration, and the evolution toward truly personalized customer experiences at scale.",
+      "category": "Technology",
+      "readTime": "11 min read",
+      "date": "December 28, 2023",
+      "tags": ["Automation", "AI", "Personalization"]
+    }
+  ],
+  "categories": [
+    "Strategic Marketing",
+    "Analytics",
+    "Content Strategy", 
+    "Branding",
+    "Technology",
+    "Psychology"
+  ],
+  "newsletter": {
+    "title": "Weekly Marketing Intelligence",
+    "description": "Get our latest insights, case studies, and strategic thinking delivered to your inbox every Tuesday.",
+    "placeholder": "Enter your email address",
+    "buttonText": "Subscribe Now"
+  }
+}

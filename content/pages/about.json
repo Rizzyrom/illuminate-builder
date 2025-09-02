@@ -1,0 +1,67 @@
+{
+  "title": "About - Illuminate Avenue", 
+  "description": "Learn about our strategic marketing approach and team expertise",
+  "hero": {
+    "badge": "About Us",
+    "title": "Strategic Marketing Excellence Since Day One",
+    "subtitle": "We are a team of passionate marketing strategists, creative minds, and data analysts who believe in the power of intelligent marketing to transform businesses."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "content": {
+      "type": "root",
+      "children": [
+        {
+          "type": "p", 
+          "children": [
+            {
+              "type": "text",
+              "text": "To illuminate the path to exponential growth for businesses through innovative, data-driven marketing strategies that deliver measurable results and sustainable success."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "values": {
+    "title": "Our Values",
+    "valueList": [
+      {
+        "title": "Excellence",
+        "description": "We strive for excellence in every campaign, strategy, and client interaction."
+      },
+      {
+        "title": "Innovation",
+        "description": "We stay ahead of trends and continuously innovate our approach."
+      },
+      {
+        "title": "Results",
+        "description": "We measure success through tangible, measurable results for our clients."
+      },
+      {
+        "title": "Integrity",
+        "description": "We operate with complete transparency and ethical standards."
+      }
+    ]
+  },
+  "team": {
+    "title": "Leadership Team",
+    "teamMembers": [
+      {
+        "name": "Sarah Johnson",
+        "role": "Chief Strategy Officer",
+        "bio": "15+ years in strategic marketing with expertise in digital transformation and growth marketing."
+      },
+      {
+        "name": "Michael Chen",
+        "role": "Creative Director", 
+        "bio": "Award-winning creative professional with a track record of building memorable brand experiences."
+      },
+      {
+        "name": "Emily Rodriguez",
+        "role": "Analytics Director",
+        "bio": "Data science expert specializing in marketing analytics and performance optimization."
+      }
+    ]
+  }
+}

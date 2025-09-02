@@ -1,0 +1,85 @@
+{
+  "title": "Work - Illuminate Avenue",
+  "description": "Case studies and success stories from our client partnerships",
+  "hero": {
+    "badge": "Our Work",
+    "title": "Proven Results That Speak Volumes",
+    "subtitle": "Explore how we've transformed businesses across industries through strategic marketing excellence and innovative campaigns."
+  },
+  "caseStudies": [
+    {
+      "title": "TechFlow Solutions",
+      "industry": "B2B SaaS",
+      "challenge": "Low organic traffic and poor lead quality",
+      "solution": "Comprehensive SEO strategy and content marketing overhaul",
+      "results": [
+        "300% increase in organic traffic",
+        "85% improvement in lead quality",
+        "$2.5M additional ARR generated"
+      ],
+      "timeframe": "6 months"
+    },
+    {
+      "title": "Retail Revolution",
+      "industry": "E-commerce",
+      "challenge": "High customer acquisition cost and low retention",
+      "solution": "Multi-channel marketing strategy with personalization",
+      "results": [
+        "45% reduction in CAC",
+        "60% increase in customer lifetime value",
+        "200% growth in repeat purchases"
+      ],
+      "timeframe": "8 months"
+    },
+    {
+      "title": "HealthWise Clinic",
+      "industry": "Healthcare",
+      "challenge": "Limited online presence and patient acquisition",
+      "solution": "Digital transformation with local SEO and reputation management",
+      "results": [
+        "400% increase in online appointments",
+        "90% improvement in local search rankings",
+        "50+ new patients monthly"
+      ],
+      "timeframe": "4 months"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Illuminate Avenue transformed our entire marketing approach. The results exceeded our expectations and continue to drive sustainable growth.",
+      "author": "Sarah Martinez",
+      "role": "CEO, TechFlow Solutions",
+      "company": "TechFlow Solutions"
+    },
+    {
+      "quote": "Their strategic approach and attention to detail helped us achieve ROI we never thought possible. Highly recommended!",
+      "author": "David Chen", 
+      "role": "Marketing Director",
+      "company": "Retail Revolution"
+    },
+    {
+      "quote": "The team at Illuminate Avenue didn't just deliver results - they educated us on sustainable marketing practices that continue to benefit our practice.",
+      "author": "Dr. Lisa Thompson",
+      "role": "Practice Owner", 
+      "company": "HealthWise Clinic"
+    }
+  ],
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Successful Campaigns"
+    },
+    {
+      "value": "300%",
+      "label": "Average ROI Increase"
+    },
+    {
+      "value": "$50M+",
+      "label": "Revenue Generated"
+    },
+    {
+      "value": "98%",
+      "label": "Client Satisfaction"
+    }
+  ]
+}

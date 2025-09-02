@@ -1,0 +1,84 @@
+{
+  "title": "Services - Illuminate Avenue",
+  "description": "Comprehensive marketing services to drive exponential growth",
+  "hero": {
+    "badge": "Our Services",
+    "title": "Comprehensive Marketing Solutions",
+    "subtitle": "From strategy to execution, we provide end-to-end marketing services designed to accelerate your business growth and maximize ROI."
+  },
+  "serviceDetails": [
+    {
+      "title": "Strategic Planning & Consulting",
+      "description": "Data-driven marketing strategies tailored to your business objectives, market positioning, and competitive landscape.",
+      "features": [
+        "Market Research & Analysis",
+        "Competitive Intelligence", 
+        "Customer Journey Mapping",
+        "Growth Strategy Development",
+        "KPI Framework Setup"
+      ],
+      "price": "Starting at $5,000/month"
+    },
+    {
+      "title": "Digital Marketing & SEO",
+      "description": "Complete digital ecosystem optimization to maximize your online presence and drive qualified traffic.",
+      "features": [
+        "Search Engine Optimization",
+        "Pay-Per-Click Advertising",
+        "Social Media Marketing",
+        "Content Marketing Strategy",
+        "Email Marketing Automation"
+      ],
+      "price": "Starting at $3,000/month"
+    },
+    {
+      "title": "Brand Development & Design",
+      "description": "Comprehensive brand identity creation and enhancement that resonates with your target audience.",
+      "features": [
+        "Brand Strategy & Positioning",
+        "Logo & Visual Identity Design",
+        "Brand Guidelines Development",
+        "Marketing Collateral Design",
+        "Website Design & Development"
+      ],
+      "price": "Starting at $8,000"
+    },
+    {
+      "title": "Performance Analytics & Optimization",
+      "description": "Advanced tracking, measurement, and optimization to maximize your marketing ROI and business growth.",
+      "features": [
+        "Marketing Attribution Modeling",
+        "Conversion Rate Optimization",
+        "A/B Testing & Experimentation",
+        "Custom Dashboard Creation",
+        "Performance Reporting"
+      ],
+      "price": "Starting at $2,000/month"
+    }
+  ],
+  "process": {
+    "title": "Our Process",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Discovery & Analysis",
+        "description": "We dive deep into your business, market, and goals to understand what success looks like."
+      },
+      {
+        "number": "02", 
+        "title": "Strategy Development",
+        "description": "We create a comprehensive marketing strategy tailored to your unique challenges and opportunities."
+      },
+      {
+        "number": "03",
+        "title": "Implementation & Execution", 
+        "description": "We execute the strategy with precision, managing all aspects of your marketing campaigns."
+      },
+      {
+        "number": "04",
+        "title": "Monitoring & Optimization",
+        "description": "We continuously monitor performance and optimize campaigns for maximum ROI and growth."
+      }
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "title": "Strategy - Illuminate Avenue",
+  "description": "Our strategic marketing methodology and approach to driving business growth",
+  "hero": {
+    "badge": "Our Strategy",
+    "title": "Strategic Marketing That Delivers Results",
+    "subtitle": "Our proven methodology combines data-driven insights, creative innovation, and strategic execution to accelerate your business growth."
+  },
+  "methodology": {
+    "title": "Our Strategic Methodology",
+    "description": "We follow a comprehensive approach that ensures every marketing initiative is aligned with your business objectives and delivers measurable results.",
+    "phases": [
+      {
+        "title": "Discovery & Research",
+        "description": "Deep dive into your business, market, competitors, and customer base to uncover opportunities and challenges.",
+        "activities": [
+          "Market Analysis & Competitive Intelligence",
+          "Customer Research & Persona Development", 
+          "Business Goals & KPI Definition",
+          "Current State Assessment"
+        ]
+      },
+      {
+        "title": "Strategy Development",
+        "description": "Create a comprehensive marketing strategy tailored to your unique business needs and market position.",
+        "activities": [
+          "Strategic Framework Development",
+          "Channel Strategy & Mix Optimization",
+          "Content Strategy & Planning",
+          "Budget Allocation & Resource Planning"
+        ]
+      },
+      {
+        "title": "Implementation & Execution", 
+        "description": "Execute the strategy with precision, managing all aspects of campaign deployment and optimization.",
+        "activities": [
+          "Campaign Development & Launch",
+          "Content Creation & Distribution",
+          "Performance Monitoring & Tracking",
+          "Cross-Channel Coordination"
+        ]
+      },
+      {
+        "title": "Optimization & Growth",
+        "description": "Continuously monitor, analyze, and optimize performance to maximize ROI and drive sustainable growth.",
+        "activities": [
+          "Performance Analysis & Reporting",
+          "A/B Testing & Experimentation",
+          "Strategy Refinement & Iteration",
+          "Scale & Expansion Planning"
+        ]
+      }
+    ]
+  },
+  "frameworks": {
+    "title": "Strategic Frameworks We Use",
+    "list": [
+      {
+        "name": "Growth Marketing Framework",
+        "description": "Systematic approach to identifying and scaling high-impact growth opportunities across the entire customer lifecycle."
+      },
+      {
+        "name": "Data-Driven Attribution",
+        "description": "Advanced attribution modeling to understand the true impact of each marketing touchpoint on business outcomes."
+      },
+      {
+        "name": "Customer Journey Optimization",
+        "description": "Comprehensive mapping and optimization of every customer touchpoint to improve conversion and retention."
+      },
+      {
+        "name": "Integrated Channel Strategy", 
+        "description": "Coordinated multi-channel approach that maximizes synergies between different marketing channels and tactics."
+      }
+    ]
+  },
+  "principles": {
+    "title": "Our Strategic Principles",
+    "list": [
+      {
+        "title": "Data-Driven Decisions",
+        "description": "Every strategic decision is backed by comprehensive data analysis and market insights."
+      },
+      {
+        "title": "Customer-Centric Focus",
+        "description": "All strategies are designed with the customer experience and value proposition at the center."
+      },
+      {
+        "title": "Agile Implementation",
+        "description": "Flexible, iterative approach that allows for rapid testing, learning, and optimization."
+      },
+      {
+        "title": "Measurable Outcomes",
+        "description": "Clear KPIs and metrics ensure accountability and demonstrate tangible business impact."
+      },
+      {
+        "title": "Long-term Thinking",
+        "description": "Balanced approach that drives immediate results while building sustainable competitive advantages."
+      },
+      {
+        "title": "Innovation Focus",
+        "description": "Continuous exploration of new channels, technologies, and approaches to stay ahead of the competition."
+      }
+    ]
+  }
+}
