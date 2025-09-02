@@ -5,10 +5,8 @@ var config_default = defineConfig({
   branch,
   // Get this from tina.io
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  // Get this from tina.io
+  // Get this from tina.io  
   token: process.env.TINA_TOKEN,
-  // Local client for development
-  localContentPath: "./content",
   build: {
     outputFolder: "admin",
     publicFolder: "public"
@@ -96,6 +94,7 @@ var config_default = defineConfig({
               }
             ]
           },
+          // Flexible content sections
           {
             type: "object",
             name: "services",
@@ -136,6 +135,24 @@ var config_default = defineConfig({
                     type: "string",
                     name: "icon",
                     label: "Service Icon"
+                  },
+                  {
+                    type: "object",
+                    name: "features",
+                    label: "Features",
+                    list: true,
+                    fields: [
+                      {
+                        type: "string",
+                        name: "feature",
+                        label: "Feature"
+                      }
+                    ]
+                  },
+                  {
+                    type: "string",
+                    name: "price",
+                    label: "Price"
                   }
                 ]
               }
@@ -197,6 +214,89 @@ var config_default = defineConfig({
                     type: "string",
                     name: "submitText",
                     label: "Submit Button Text"
+                  }
+                ]
+              }
+            ]
+          },
+          // Additional flexible fields for different page types
+          {
+            type: "object",
+            name: "mission",
+            label: "Mission Section",
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Mission Title"
+              },
+              {
+                type: "rich-text",
+                name: "content",
+                label: "Mission Content"
+              }
+            ]
+          },
+          {
+            type: "object",
+            name: "values",
+            label: "Values Section",
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Values Title"
+              },
+              {
+                type: "object",
+                name: "valueList",
+                label: "Values",
+                list: true,
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Value Title"
+                  },
+                  {
+                    type: "string",
+                    name: "description",
+                    label: "Value Description"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            type: "object",
+            name: "team",
+            label: "Team Section",
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Team Title"
+              },
+              {
+                type: "object",
+                name: "teamMembers",
+                label: "Team Members",
+                list: true,
+                fields: [
+                  {
+                    type: "string",
+                    name: "name",
+                    label: "Name"
+                  },
+                  {
+                    type: "string",
+                    name: "role",
+                    label: "Role"
+                  },
+                  {
+                    type: "string",
+                    name: "bio",
+                    label: "Bio"
                   }
                 ]
               }

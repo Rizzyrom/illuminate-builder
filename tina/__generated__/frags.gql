@@ -28,6 +28,11 @@ fragment PageParts on Page {
       title
       description
       icon
+      features {
+        __typename
+        feature
+      }
+      price
     }
   }
   about {
@@ -45,6 +50,30 @@ fragment PageParts on Page {
       emailLabel
       messageLabel
       submitText
+    }
+  }
+  mission {
+    __typename
+    title
+    content
+  }
+  values {
+    __typename
+    title
+    valueList {
+      __typename
+      title
+      description
+    }
+  }
+  team {
+    __typename
+    title
+    teamMembers {
+      __typename
+      name
+      role
+      bio
     }
   }
 }

@@ -111,10 +111,16 @@ type PageHero {
   stats: [PageHeroStats]
 }
 
+type PageServicesServiceCardsFeatures {
+  feature: String
+}
+
 type PageServicesServiceCards {
   title: String
   description: String
   icon: String
+  features: [PageServicesServiceCardsFeatures]
+  price: String
 }
 
 type PageServices {
@@ -142,6 +148,32 @@ type PageContact {
   form: PageContactForm
 }
 
+type PageMission {
+  title: String
+  content: JSON
+}
+
+type PageValuesValueList {
+  title: String
+  description: String
+}
+
+type PageValues {
+  title: String
+  valueList: [PageValuesValueList]
+}
+
+type PageTeamTeamMembers {
+  name: String
+  role: String
+  bio: String
+}
+
+type PageTeam {
+  title: String
+  teamMembers: [PageTeamTeamMembers]
+}
+
 type Page implements Node & Document {
   title: String!
   description: String
@@ -149,6 +181,9 @@ type Page implements Node & Document {
   services: PageServices
   about: PageAbout
   contact: PageContact
+  mission: PageMission
+  values: PageValues
+  team: PageTeam
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -179,10 +214,16 @@ input PageHeroFilter {
   stats: PageHeroStatsFilter
 }
 
+input PageServicesServiceCardsFeaturesFilter {
+  feature: StringFilter
+}
+
 input PageServicesServiceCardsFilter {
   title: StringFilter
   description: StringFilter
   icon: StringFilter
+  features: PageServicesServiceCardsFeaturesFilter
+  price: StringFilter
 }
 
 input PageServicesFilter {
@@ -216,6 +257,32 @@ input PageContactFilter {
   form: PageContactFormFilter
 }
 
+input PageMissionFilter {
+  title: StringFilter
+  content: RichTextFilter
+}
+
+input PageValuesValueListFilter {
+  title: StringFilter
+  description: StringFilter
+}
+
+input PageValuesFilter {
+  title: StringFilter
+  valueList: PageValuesValueListFilter
+}
+
+input PageTeamTeamMembersFilter {
+  name: StringFilter
+  role: StringFilter
+  bio: StringFilter
+}
+
+input PageTeamFilter {
+  title: StringFilter
+  teamMembers: PageTeamTeamMembersFilter
+}
+
 input PageFilter {
   title: StringFilter
   description: StringFilter
@@ -223,6 +290,9 @@ input PageFilter {
   services: PageServicesFilter
   about: PageAboutFilter
   contact: PageContactFilter
+  mission: PageMissionFilter
+  values: PageValuesFilter
+  team: PageTeamFilter
 }
 
 type PageConnectionEdges {
@@ -386,10 +456,16 @@ input PageHeroMutation {
   stats: [PageHeroStatsMutation]
 }
 
+input PageServicesServiceCardsFeaturesMutation {
+  feature: String
+}
+
 input PageServicesServiceCardsMutation {
   title: String
   description: String
   icon: String
+  features: [PageServicesServiceCardsFeaturesMutation]
+  price: String
 }
 
 input PageServicesMutation {
@@ -417,6 +493,32 @@ input PageContactMutation {
   form: PageContactFormMutation
 }
 
+input PageMissionMutation {
+  title: String
+  content: JSON
+}
+
+input PageValuesValueListMutation {
+  title: String
+  description: String
+}
+
+input PageValuesMutation {
+  title: String
+  valueList: [PageValuesValueListMutation]
+}
+
+input PageTeamTeamMembersMutation {
+  name: String
+  role: String
+  bio: String
+}
+
+input PageTeamMutation {
+  title: String
+  teamMembers: [PageTeamTeamMembersMutation]
+}
+
 input PageMutation {
   title: String
   description: String
@@ -424,6 +526,9 @@ input PageMutation {
   services: PageServicesMutation
   about: PageAboutMutation
   contact: PageContactMutation
+  mission: PageMissionMutation
+  values: PageValuesMutation
+  team: PageTeamMutation
 }
 
 input GlobalSiteNavigationLinksMutation {

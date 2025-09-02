@@ -222,11 +222,18 @@ export type PageHero = {
   stats?: Maybe<Array<Maybe<PageHeroStats>>>;
 };
 
+export type PageServicesServiceCardsFeatures = {
+  __typename?: 'PageServicesServiceCardsFeatures';
+  feature?: Maybe<Scalars['String']['output']>;
+};
+
 export type PageServicesServiceCards = {
   __typename?: 'PageServicesServiceCards';
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   icon?: Maybe<Scalars['String']['output']>;
+  features?: Maybe<Array<Maybe<PageServicesServiceCardsFeatures>>>;
+  price?: Maybe<Scalars['String']['output']>;
 };
 
 export type PageServices = {
@@ -258,6 +265,37 @@ export type PageContact = {
   form?: Maybe<PageContactForm>;
 };
 
+export type PageMission = {
+  __typename?: 'PageMission';
+  title?: Maybe<Scalars['String']['output']>;
+  content?: Maybe<Scalars['JSON']['output']>;
+};
+
+export type PageValuesValueList = {
+  __typename?: 'PageValuesValueList';
+  title?: Maybe<Scalars['String']['output']>;
+  description?: Maybe<Scalars['String']['output']>;
+};
+
+export type PageValues = {
+  __typename?: 'PageValues';
+  title?: Maybe<Scalars['String']['output']>;
+  valueList?: Maybe<Array<Maybe<PageValuesValueList>>>;
+};
+
+export type PageTeamTeamMembers = {
+  __typename?: 'PageTeamTeamMembers';
+  name?: Maybe<Scalars['String']['output']>;
+  role?: Maybe<Scalars['String']['output']>;
+  bio?: Maybe<Scalars['String']['output']>;
+};
+
+export type PageTeam = {
+  __typename?: 'PageTeam';
+  title?: Maybe<Scalars['String']['output']>;
+  teamMembers?: Maybe<Array<Maybe<PageTeamTeamMembers>>>;
+};
+
 export type Page = Node & Document & {
   __typename?: 'Page';
   title: Scalars['String']['output'];
@@ -266,6 +304,9 @@ export type Page = Node & Document & {
   services?: Maybe<PageServices>;
   about?: Maybe<PageAbout>;
   contact?: Maybe<PageContact>;
+  mission?: Maybe<PageMission>;
+  values?: Maybe<PageValues>;
+  team?: Maybe<PageTeam>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -296,10 +337,16 @@ export type PageHeroFilter = {
   stats?: InputMaybe<PageHeroStatsFilter>;
 };
 
+export type PageServicesServiceCardsFeaturesFilter = {
+  feature?: InputMaybe<StringFilter>;
+};
+
 export type PageServicesServiceCardsFilter = {
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   icon?: InputMaybe<StringFilter>;
+  features?: InputMaybe<PageServicesServiceCardsFeaturesFilter>;
+  price?: InputMaybe<StringFilter>;
 };
 
 export type PageServicesFilter = {
@@ -333,6 +380,32 @@ export type PageContactFilter = {
   form?: InputMaybe<PageContactFormFilter>;
 };
 
+export type PageMissionFilter = {
+  title?: InputMaybe<StringFilter>;
+  content?: InputMaybe<RichTextFilter>;
+};
+
+export type PageValuesValueListFilter = {
+  title?: InputMaybe<StringFilter>;
+  description?: InputMaybe<StringFilter>;
+};
+
+export type PageValuesFilter = {
+  title?: InputMaybe<StringFilter>;
+  valueList?: InputMaybe<PageValuesValueListFilter>;
+};
+
+export type PageTeamTeamMembersFilter = {
+  name?: InputMaybe<StringFilter>;
+  role?: InputMaybe<StringFilter>;
+  bio?: InputMaybe<StringFilter>;
+};
+
+export type PageTeamFilter = {
+  title?: InputMaybe<StringFilter>;
+  teamMembers?: InputMaybe<PageTeamTeamMembersFilter>;
+};
+
 export type PageFilter = {
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
@@ -340,6 +413,9 @@ export type PageFilter = {
   services?: InputMaybe<PageServicesFilter>;
   about?: InputMaybe<PageAboutFilter>;
   contact?: InputMaybe<PageContactFilter>;
+  mission?: InputMaybe<PageMissionFilter>;
+  values?: InputMaybe<PageValuesFilter>;
+  team?: InputMaybe<PageTeamFilter>;
 };
 
 export type PageConnectionEdges = {
@@ -585,10 +661,16 @@ export type PageHeroMutation = {
   stats?: InputMaybe<Array<InputMaybe<PageHeroStatsMutation>>>;
 };
 
+export type PageServicesServiceCardsFeaturesMutation = {
+  feature?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type PageServicesServiceCardsMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   icon?: InputMaybe<Scalars['String']['input']>;
+  features?: InputMaybe<Array<InputMaybe<PageServicesServiceCardsFeaturesMutation>>>;
+  price?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type PageServicesMutation = {
@@ -616,6 +698,32 @@ export type PageContactMutation = {
   form?: InputMaybe<PageContactFormMutation>;
 };
 
+export type PageMissionMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  content?: InputMaybe<Scalars['JSON']['input']>;
+};
+
+export type PageValuesValueListMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  description?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PageValuesMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  valueList?: InputMaybe<Array<InputMaybe<PageValuesValueListMutation>>>;
+};
+
+export type PageTeamTeamMembersMutation = {
+  name?: InputMaybe<Scalars['String']['input']>;
+  role?: InputMaybe<Scalars['String']['input']>;
+  bio?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PageTeamMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  teamMembers?: InputMaybe<Array<InputMaybe<PageTeamTeamMembersMutation>>>;
+};
+
 export type PageMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
@@ -623,6 +731,9 @@ export type PageMutation = {
   services?: InputMaybe<PageServicesMutation>;
   about?: InputMaybe<PageAboutMutation>;
   contact?: InputMaybe<PageContactMutation>;
+  mission?: InputMaybe<PageMissionMutation>;
+  values?: InputMaybe<PageValuesMutation>;
+  team?: InputMaybe<PageTeamMutation>;
 };
 
 export type GlobalSiteNavigationLinksMutation = {
@@ -656,7 +767,7 @@ export type BlogMutation = {
   body?: InputMaybe<Scalars['JSON']['input']>;
 };
 
-export type PagePartsFragment = { __typename: 'Page', title: string, description?: string | null, hero?: { __typename: 'PageHero', badge?: string | null, title?: string | null, subtitle?: string | null, cta?: { __typename: 'PageHeroCta', text?: string | null, href?: string | null } | null, stats?: Array<{ __typename: 'PageHeroStats', value?: string | null, label?: string | null } | null> | null } | null, services?: { __typename: 'PageServices', badge?: string | null, title?: string | null, subtitle?: string | null, serviceCards?: Array<{ __typename: 'PageServicesServiceCards', title?: string | null, description?: string | null, icon?: string | null } | null> | null } | null, about?: { __typename: 'PageAbout', title?: string | null, content?: any | null } | null, contact?: { __typename: 'PageContact', title?: string | null, subtitle?: string | null, form?: { __typename: 'PageContactForm', nameLabel?: string | null, emailLabel?: string | null, messageLabel?: string | null, submitText?: string | null } | null } | null };
+export type PagePartsFragment = { __typename: 'Page', title: string, description?: string | null, hero?: { __typename: 'PageHero', badge?: string | null, title?: string | null, subtitle?: string | null, cta?: { __typename: 'PageHeroCta', text?: string | null, href?: string | null } | null, stats?: Array<{ __typename: 'PageHeroStats', value?: string | null, label?: string | null } | null> | null } | null, services?: { __typename: 'PageServices', badge?: string | null, title?: string | null, subtitle?: string | null, serviceCards?: Array<{ __typename: 'PageServicesServiceCards', title?: string | null, description?: string | null, icon?: string | null, price?: string | null, features?: Array<{ __typename: 'PageServicesServiceCardsFeatures', feature?: string | null } | null> | null } | null> | null } | null, about?: { __typename: 'PageAbout', title?: string | null, content?: any | null } | null, contact?: { __typename: 'PageContact', title?: string | null, subtitle?: string | null, form?: { __typename: 'PageContactForm', nameLabel?: string | null, emailLabel?: string | null, messageLabel?: string | null, submitText?: string | null } | null } | null, mission?: { __typename: 'PageMission', title?: string | null, content?: any | null } | null, values?: { __typename: 'PageValues', title?: string | null, valueList?: Array<{ __typename: 'PageValuesValueList', title?: string | null, description?: string | null } | null> | null } | null, team?: { __typename: 'PageTeam', title?: string | null, teamMembers?: Array<{ __typename: 'PageTeamTeamMembers', name?: string | null, role?: string | null, bio?: string | null } | null> | null } | null };
 
 export type GlobalPartsFragment = { __typename: 'Global', site?: { __typename: 'GlobalSite', logoText?: string | null, navigation?: { __typename: 'GlobalSiteNavigation', links?: Array<{ __typename: 'GlobalSiteNavigationLinks', label?: string | null, href?: string | null } | null> | null } | null, footer?: { __typename: 'GlobalSiteFooter', content?: any | null } | null } | null };
 
@@ -667,7 +778,7 @@ export type PageQueryVariables = Exact<{
 }>;
 
 
-export type PageQuery = { __typename?: 'Query', page: { __typename: 'Page', id: string, title: string, description?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'PageHero', badge?: string | null, title?: string | null, subtitle?: string | null, cta?: { __typename: 'PageHeroCta', text?: string | null, href?: string | null } | null, stats?: Array<{ __typename: 'PageHeroStats', value?: string | null, label?: string | null } | null> | null } | null, services?: { __typename: 'PageServices', badge?: string | null, title?: string | null, subtitle?: string | null, serviceCards?: Array<{ __typename: 'PageServicesServiceCards', title?: string | null, description?: string | null, icon?: string | null } | null> | null } | null, about?: { __typename: 'PageAbout', title?: string | null, content?: any | null } | null, contact?: { __typename: 'PageContact', title?: string | null, subtitle?: string | null, form?: { __typename: 'PageContactForm', nameLabel?: string | null, emailLabel?: string | null, messageLabel?: string | null, submitText?: string | null } | null } | null } };
+export type PageQuery = { __typename?: 'Query', page: { __typename: 'Page', id: string, title: string, description?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'PageHero', badge?: string | null, title?: string | null, subtitle?: string | null, cta?: { __typename: 'PageHeroCta', text?: string | null, href?: string | null } | null, stats?: Array<{ __typename: 'PageHeroStats', value?: string | null, label?: string | null } | null> | null } | null, services?: { __typename: 'PageServices', badge?: string | null, title?: string | null, subtitle?: string | null, serviceCards?: Array<{ __typename: 'PageServicesServiceCards', title?: string | null, description?: string | null, icon?: string | null, price?: string | null, features?: Array<{ __typename: 'PageServicesServiceCardsFeatures', feature?: string | null } | null> | null } | null> | null } | null, about?: { __typename: 'PageAbout', title?: string | null, content?: any | null } | null, contact?: { __typename: 'PageContact', title?: string | null, subtitle?: string | null, form?: { __typename: 'PageContactForm', nameLabel?: string | null, emailLabel?: string | null, messageLabel?: string | null, submitText?: string | null } | null } | null, mission?: { __typename: 'PageMission', title?: string | null, content?: any | null } | null, values?: { __typename: 'PageValues', title?: string | null, valueList?: Array<{ __typename: 'PageValuesValueList', title?: string | null, description?: string | null } | null> | null } | null, team?: { __typename: 'PageTeam', title?: string | null, teamMembers?: Array<{ __typename: 'PageTeamTeamMembers', name?: string | null, role?: string | null, bio?: string | null } | null> | null } | null } };
 
 export type PageConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -679,7 +790,7 @@ export type PageConnectionQueryVariables = Exact<{
 }>;
 
 
-export type PageConnectionQuery = { __typename?: 'Query', pageConnection: { __typename?: 'PageConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PageConnectionEdges', cursor: string, node?: { __typename: 'Page', id: string, title: string, description?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'PageHero', badge?: string | null, title?: string | null, subtitle?: string | null, cta?: { __typename: 'PageHeroCta', text?: string | null, href?: string | null } | null, stats?: Array<{ __typename: 'PageHeroStats', value?: string | null, label?: string | null } | null> | null } | null, services?: { __typename: 'PageServices', badge?: string | null, title?: string | null, subtitle?: string | null, serviceCards?: Array<{ __typename: 'PageServicesServiceCards', title?: string | null, description?: string | null, icon?: string | null } | null> | null } | null, about?: { __typename: 'PageAbout', title?: string | null, content?: any | null } | null, contact?: { __typename: 'PageContact', title?: string | null, subtitle?: string | null, form?: { __typename: 'PageContactForm', nameLabel?: string | null, emailLabel?: string | null, messageLabel?: string | null, submitText?: string | null } | null } | null } | null } | null> | null } };
+export type PageConnectionQuery = { __typename?: 'Query', pageConnection: { __typename?: 'PageConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PageConnectionEdges', cursor: string, node?: { __typename: 'Page', id: string, title: string, description?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'PageHero', badge?: string | null, title?: string | null, subtitle?: string | null, cta?: { __typename: 'PageHeroCta', text?: string | null, href?: string | null } | null, stats?: Array<{ __typename: 'PageHeroStats', value?: string | null, label?: string | null } | null> | null } | null, services?: { __typename: 'PageServices', badge?: string | null, title?: string | null, subtitle?: string | null, serviceCards?: Array<{ __typename: 'PageServicesServiceCards', title?: string | null, description?: string | null, icon?: string | null, price?: string | null, features?: Array<{ __typename: 'PageServicesServiceCardsFeatures', feature?: string | null } | null> | null } | null> | null } | null, about?: { __typename: 'PageAbout', title?: string | null, content?: any | null } | null, contact?: { __typename: 'PageContact', title?: string | null, subtitle?: string | null, form?: { __typename: 'PageContactForm', nameLabel?: string | null, emailLabel?: string | null, messageLabel?: string | null, submitText?: string | null } | null } | null, mission?: { __typename: 'PageMission', title?: string | null, content?: any | null } | null, values?: { __typename: 'PageValues', title?: string | null, valueList?: Array<{ __typename: 'PageValuesValueList', title?: string | null, description?: string | null } | null> | null } | null, team?: { __typename: 'PageTeam', title?: string | null, teamMembers?: Array<{ __typename: 'PageTeamTeamMembers', name?: string | null, role?: string | null, bio?: string | null } | null> | null } | null } | null } | null> | null } };
 
 export type GlobalQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -750,6 +861,11 @@ export const PagePartsFragmentDoc = gql`
       title
       description
       icon
+      features {
+        __typename
+        feature
+      }
+      price
     }
   }
   about {
@@ -767,6 +883,30 @@ export const PagePartsFragmentDoc = gql`
       emailLabel
       messageLabel
       submitText
+    }
+  }
+  mission {
+    __typename
+    title
+    content
+  }
+  values {
+    __typename
+    title
+    valueList {
+      __typename
+      title
+      description
+    }
+  }
+  team {
+    __typename
+    title
+    teamMembers {
+      __typename
+      name
+      role
+      bio
     }
   }
 }
@@ -1041,7 +1181,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: "http://localhost:4001/graphql",
+        url: "https://content.tinajs.io/1.6/content/b8990116-b32b-499b-a4fb-934016212e21/github/main",
         queries,
       })
     )
